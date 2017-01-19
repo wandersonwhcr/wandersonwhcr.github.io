@@ -21,3 +21,30 @@ exec { "apt-get : autoremove":
     command => "apt-get autoremove -q -y",
     require => Exec["apt-get : upgrade"],
 }
+
+package { "vim":
+    name => "vim",
+}
+
+package { "git":
+    name => "git",
+}
+
+package { "unzip":
+    name => "unzip",
+}
+
+package { "exim4":
+    name   => "exim4-base",
+    ensure => "purged",
+}
+
+package { "nano":
+    name   => "nano",
+    ensure => "purged",
+}
+
+package { "rpcbind":
+    name   => "rpcbind",
+    ensure => "purged",
+}
