@@ -8,5 +8,8 @@
             "email": "wandersonwhcr@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "scripts": {
+        "serve": "php -S 0.0.0.0:8000 -t . index.html"
+    }
 }
