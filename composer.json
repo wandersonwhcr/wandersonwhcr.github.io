@@ -8,7 +8,9 @@
             "email": "wandersonwhcr@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "couscous/couscous": "1.5.*"
+    },
     "scripts": {
         "serve": "php -S 0.0.0.0:8000 -t . index.html"
     }
