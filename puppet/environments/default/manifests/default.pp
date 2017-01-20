@@ -54,3 +54,10 @@ exec { "ruby : source : wget":
     cwd     => "/usr/src",
     creates => "/usr/src/ruby-2.4.0.tar.gz",
 }
+
+exec { "ruby : source : unzip":
+    command => "tar xvzf ruby-2.4.0.tar.gz",
+    cwd     => "/usr/src",
+    creates => "/usr/src/ruby-2.4.0",
+    require => Exec["ruby : source : wget"],
+}
