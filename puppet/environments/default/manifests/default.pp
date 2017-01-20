@@ -1,5 +1,5 @@
 Exec {
-    path    => ["/usr/bin", "/bin", "/usr/sbin", "/sbin" ],
+    path    => ["/usr/local/bin/", "/usr/bin", "/bin", "/usr/sbin", "/sbin" ],
     timeout => 0,
 }
 
@@ -96,4 +96,10 @@ exec { "ruby":
     cwd     => "/usr/src/ruby-2.4.0",
     creates => "/usr/local/bin/ruby",
     require => Exec["ruby : source : make"],
+}
+
+exec { "jekyll":
+    command => "gem install jekyll",
+    creates => "/usr/local/bin/jekyll",
+    require => Exec["ruby"],
 }
