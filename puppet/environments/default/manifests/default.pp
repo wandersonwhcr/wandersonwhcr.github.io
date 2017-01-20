@@ -70,7 +70,7 @@ package { "libgdbm-dev": }
 package { "openssl": }
 
 exec { "ruby : source : configure":
-    command => "sh configure --prefix=/opt/ruby",
+    command => "sh configure",
     cwd     => "/usr/src/ruby-2.4.0",
     creates => "/usr/src/ruby-2.4.0/Makefile",
     require => [
@@ -87,8 +87,13 @@ exec { "ruby : source : configure":
 exec { "ruby : source : make":
     command => "make",
     cwd     => "/usr/src/ruby-2.4.0",
-    creates => "/usr/src/ruby-2.4.0/bin/ruby",
-    require => [
-        Exec["ruby : source : configure"],
-    ],
+    creates => "/usr/src/ruby-2.4.0/ruby",
+    require => Exec["ruby : source : configure"],
+}
+
+exec { "ruby":
+    command => "make install",
+    cwd     => "/usr/src/ruby-2.4.0",
+    creates => "/usr/local/bin/ruby",
+    require => Exec["ruby : source : make"],
 }
