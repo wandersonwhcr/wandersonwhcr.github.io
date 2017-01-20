@@ -68,3 +68,18 @@ package { "libssl-dev": }
 package { "libreadline-dev": }
 package { "libgdbm-dev": }
 package { "openssl": }
+
+exec { "ruby : source : configure":
+    command => "sh configure --prefix=/opt/ruby",
+    cwd     => "/usr/src/ruby-2.4.0",
+    creates => "/usr/src/ruby-2.4.0/Makefile",
+    require => [
+        Exec["ruby : source : unzip"],
+        Package["build-essential"],
+        Package["zlib1g-dev"],
+        Package["libssl-dev"],
+        Package["libreadline-dev"],
+        Package["libgdbm-dev"],
+        Package["openssl"],
+    ],
+}
