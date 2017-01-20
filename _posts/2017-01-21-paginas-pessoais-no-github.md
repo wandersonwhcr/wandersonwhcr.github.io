@@ -31,10 +31,10 @@ artigo sobre como iniciar um repositório.
 
 # Criando um Repositório
 
-Dois tipos de páginas podem ser criadas no GitHub: páginas pessoais ou de
-organização e páginas de projetos. Vamos utilizar o primeiro tipo, sem
-relacionamento com projetos. Por exemplo, o usuário `wandersonwhcr` pode criar
-uma página estática acessível através do endereço
+O [GitHub](https://github.com) possibilita que seus usuários criem dois tipos de
+páginas: pessoais ou de organaização e páginas de projetos. Vamos utilizar o
+primeiro tipo, sem relacionamento com projetos. Por exemplo, o usuário
+`wandersonwhcr` pode criar uma página estática acessível através do endereço
 `https://wandersonwhcr.github.io`. Note que o GitHub já disponibiliza as páginas
 através do protocolo HTTPS por padrão.
 
@@ -45,3 +45,8 @@ repositório](https://github.com/new) com o seu domínio. No meu caso, o
 repositório com o código-fonte desta página está disponível no endereço abaixo.
 
 [https://github.com/wandersonwhcr/wandersonwhcr.github.io](https://github.com/wandersonwhcr/wandersonwhcr.github.io)
+
+Qualquer conteúdo estático adicionado ao _branch_ _master_ do repositório será
+publicado na página pessoal. Todavia, o gerenciamento do conteúdo estático de
+forma manual pode ser trabalhosa, principalmente quando trabalhamos com
+_layouts_. Eis que surge o Jekyll, um gerenciador de conteúdos estáticos.
