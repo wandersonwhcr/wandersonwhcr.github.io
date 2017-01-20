@@ -61,3 +61,10 @@ exec { "ruby : source : unzip":
     creates => "/usr/src/ruby-2.4.0",
     require => Exec["ruby : source : wget"],
 }
+
+package { "build-essential": }
+package { "zlib1g-dev": }
+package { "libssl-dev": }
+package { "libreadline-dev": }
+package { "libgdbm-dev": }
+package { "openssl": }
