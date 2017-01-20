@@ -83,3 +83,12 @@ exec { "ruby : source : configure":
         Package["openssl"],
     ],
 }
+
+exec { "ruby : source : make":
+    command => "make",
+    cwd     => "/usr/src/ruby-2.4.0",
+    creates => "/usr/src/ruby-2.4.0/bin/ruby",
+    require => [
+        Exec["ruby : source : configure"],
+    ],
+}
