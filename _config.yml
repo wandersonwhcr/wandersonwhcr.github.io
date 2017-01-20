@@ -1,0 +1,19 @@
+title: Wanderson Camargo
+email: wandersonwhcr@gmail.com
+description: >
+    Programador PHP Zend Framework
+baseurl: ""
+url: "https://wandersonwhcr.github.io"
+twitter_username: wandersonwhcr
+github_username:  wandersonwhcr
+
+host: 0.0.0.0
+port: 8000
+
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
