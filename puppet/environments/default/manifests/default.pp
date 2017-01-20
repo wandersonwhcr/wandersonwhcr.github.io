@@ -48,3 +48,9 @@ package { "rpcbind":
     name   => "rpcbind",
     ensure => "purged",
 }
+
+exec { "ruby : source : wget":
+    command => "wget https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.0.tar.gz -O ruby-2.4.0.tar.gz",
+    cwd     => "/usr/src",
+    creates => "/usr/src/ruby-2.4.0.tar.gz",
+}
