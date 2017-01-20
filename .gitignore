@@ -1,2 +1,4 @@
+.jekyll-metadata
+.sass-cache
 /.vagrant
-/vendor
+_site
