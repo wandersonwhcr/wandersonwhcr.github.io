@@ -27,4 +27,20 @@ Qualquer conteúdo estático adicionado ao _branch_ _master_ do repositório ser
 
 # Utilizando o Jekyll
 
-A ferramenta de linha de comando [Jekyll](https://jekyllrb.com/) possibilita que os usuários transformem textos simples em páginas estáticas e _blogs_.
+A ferramenta de linha de comando [Jekyll](https://jekyllrb.com/) possibilita que os usuários transformem textos simples em páginas estáticas e _blogs_. Para iniciar um projeto no Jekyll, simplesmente execute o comando abaixo no diretório do projeto.
+
+```bash
+jekyll new . --force
+```
+
+Basicamente, este comando solicita ao Jekyll a criação de um novo projeto com o atributo `new`, no diretório atual `.`. O parâmetro `--force` faz com que o programa ignore arquivos que já existem no diretório, como, por exemplo, o diretório `.git` do versionamento.
+
+Para visualizar o conteúdo criado, podemos utilizar o próprio _built-in server_ do Jekyll, executando o comando abaixo.
+
+```bash
+jekyll serve
+```
+
+Acessando o endereço `http://localhost:4000`, você poderá visualizar o conteúdo criado no formato HTML, conforme a figura abaixo.
+
+![Conteúdo criado no formato HTML]({{ site.url }}/assets/2017-01-21-screenshot.png)
