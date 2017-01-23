@@ -55,16 +55,25 @@ git commit -m'Inicializa o repositório com Jekyll'
 git push origin master
 ```
 
+O conteúdo estará disponível conforme o repositório criado. No meu caso, o conteúdo estaria disponibilizado em `https://wandersonwhcr.github.io`.
+
 # Conclusão
 
 Existem muitas ferramentas para gerenciamento de conteúdo na Internet, como WordPress, Joomla e Drupal. Todavia, estas necessitam de recursos adicionais para execução, como um serviço _web_ e banco de dados.
 
 Mesmo que estes sistemas sejam disponibilizados de forma gratuíta na Internet, podemos encontrar ferramentas mais simples, como as páginas do GitHub, que trabalham em conjunto com o Jekyll para tornar a criação de páginas estáticas mais fácil, principalmente para desenvolvedores.
 
-Além disso, o serviço é gratuíto e disponibiliza todas as páginas, por padrão, utilizando o protocolo HTTPS, aumentando a privacidade dos dados transferidos entre requisições.
+Além disso, o serviço é **gratuíto** e disponibiliza todas as páginas, por padrão, utilizando o protocolo HTTPS, aumentando a privacidade dos dados transferidos entre requisições.
+
+Por fim, as páginas do GitHub não são limitadas ao Jekyll, podendo ser geradas localmente e versionadas por qualquer gerenciador de conteúdo estático, como o [Couscous](http://couscous.io/) ou o [MkDocs](http://www.mkdocs.org/). Contudo, como não há suporte pelo GitHub para estas ferramentas, o conteúdo necessita ser gerado pelo desenvolvedor e versionado junto ao código-fonte.
 
 # Referências
 
 * [Jekyll: Simple, blog-aware and static sites](https://jekyllrb.com/)
 * [GitHub Pages: Websites for you and your projects, hosted directly from GitHub repository](https://pages.github.com/)
 * [Using Jekyll as a static site generator with GitHub Pages](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/)
+
+# Veja Mais
+
+* [StaticGen: Top open-source static site generators](https://www.staticgen.com/)
+* [Jekyll Themes](http://jekyllthemes.org/)
