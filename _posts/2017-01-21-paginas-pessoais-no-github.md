@@ -48,3 +48,23 @@ Acessando o endereço `http://localhost:4000`, você poderá visualizar o conte�
 # Publicando o Conteúdo
 
 Para publicar o conteúdo criado pelo Jekyll, basta versionar o código-fonte no _branch_ `master`, enviando-o ao GitHub. O conteúdo enviado será automaticamente convertido para HTML pelo serviço, pois o Jekyll é o _software_ para geração de páginas oficial do GitHub.
+
+```bash
+git add -A
+git commit -m'Inicializa o repositório com Jekyll'
+git push origin master
+```
+
+# Conclusão
+
+Existem muitas ferramentas para gerenciamento de conteúdo na Internet, como WordPress, Joomla e Drupal. Todavia, estas necessitam de recursos adicionais para execução, como um serviço _web_ e banco de dados.
+
+Mesmo que estes sistemas sejam disponibilizados de forma gratuíta na Internet, podemos encontrar ferramentas mais simples, como as páginas do GitHub, que trabalham em conjunto com o Jekyll para tornar a criação de páginas estáticas mais fácil, principalmente para desenvolvedores.
+
+Além disso, o serviço é gratuíto e disponibiliza todas as páginas, por padrão, utilizando o protocolo HTTPS, aumentando a privacidade dos dados transferidos entre requisições.
+
+# Referências
+
+* [Jekyll: Simple, blog-aware and static sites](https://jekyllrb.com/)
+* [GitHub Pages: Websites for you and your projects, hosted directly from GitHub repository](https://pages.github.com/)
+* [Using Jekyll as a static site generator with GitHub Pages](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/)
