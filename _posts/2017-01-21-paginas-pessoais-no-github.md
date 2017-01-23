@@ -11,9 +11,9 @@ Este primeiro artigo apresenta informações sobre como criar páginas estática
 
 Há cerca de 6 anos, eu tinha um _blog_ com conteúdos sobre programação, dedicado principalmente à linguagem de programação PHP e Zend Framework. Por mais incrível que pareça, o _blog_ era mais conhecido por uma sequência de artigos que descreviam como efetuar uma conexão _bluetooth_ entre computador executando Java e _smartphone_ com sistema operacional Android. Vai entender.
 
-No final do ano passado eu tive que desligar a minha máquina virtual na Digital Ocean por motivos pessoais e não consegui renovar o domínio na Registro BR. Como o _blog_ não era atualizado há um bom tempo, não fiz questão de buscar alternativas.
+No final do ano passado eu tive que desligar a minha máquina virtual na [DigitalOcean](https://www.digitalocean.com/) por motivos pessoais e não consegui renovar o domínio no [Registro.BR](http://registro.br/). Como o _blog_ não era atualizado há um bom tempo, não fiz questão de buscar alternativas.
 
-Nesta semana, após querer voltar a escrever, lembrei que o GitHub possibilita que seus usuários criem repositórios para apresentar conteúdos estáticos por HTTPS. Após analisar como este serviço funciona, decidi utilizá-lo e criar um artigo sobre como iniciar um repositório.
+Nesta semana, após querer voltar a escrever, lembrei que o GitHub possibilita que seus usuários criem repositórios para apresentar conteúdos estáticos em HTTPS. Após analisar como este serviço funciona, decidi utilizá-lo e criar um artigo sobre como iniciar um repositório.
 
 # Criando um Repositório
 
@@ -33,7 +33,7 @@ A ferramenta de linha de comando [Jekyll](https://jekyllrb.com/) possibilita que
 jekyll new . --force
 ```
 
-Basicamente, este comando solicita ao Jekyll a criação de um novo projeto com o atributo `new`, no diretório atual `.`. O parâmetro `--force` faz com que o programa ignore arquivos que já existem no diretório, como, por exemplo, o diretório `.git` do versionamento.
+Basicamente, este comando solicita ao Jekyll a criação de um novo projeto através do atributo `new`, no diretório atual `.`. O parâmetro `--force` faz com que o programa ignore arquivos que já existem no diretório, como, por exemplo, o diretório `.git` do versionamento.
 
 Para visualizar o conteúdo criado, podemos utilizar o próprio _built-in server_ do Jekyll, executando o comando abaixo.
 
@@ -55,13 +55,13 @@ git commit -m'Inicializa o repositório com Jekyll'
 git push origin master
 ```
 
-O conteúdo estará disponível conforme o repositório criado. No meu caso, o conteúdo estaria disponibilizado em `https://wandersonwhcr.github.io`.
+O conteúdo estará disponível conforme o repositório criado. No meu caso, o conteúdo está em `https://wandersonwhcr.github.io`.
 
 # Conclusão
 
-Existem muitas ferramentas para gerenciamento de conteúdo na Internet, como WordPress, Joomla e Drupal. Todavia, estas necessitam de recursos adicionais para execução, como um serviço _web_ e banco de dados.
+Existem muitas ferramentas para gerenciamento de conteúdo na Internet, como WordPress, Joomla e Drupal. Todavia, estas necessitam de recursos adicionais para execução, como um banco de dados.
 
-Mesmo que estes sistemas sejam disponibilizados de forma gratuíta na Internet, podemos encontrar ferramentas mais simples, como as páginas do GitHub, que trabalham em conjunto com o Jekyll para tornar a criação de páginas estáticas mais fácil, principalmente para desenvolvedores.
+Mesmo que estes sistemas sejam disponibilizados de forma gratuíta na Internet, podemos encontrar ferramentas mais simples, como as páginas do GitHub, que trabalham em conjunto com o Jekyll para tornar a criação de páginas estáticas mais acessível, principalmente para desenvolvedores.
 
 Além disso, o serviço é **gratuíto** e disponibiliza todas as páginas, por padrão, utilizando o protocolo HTTPS, aumentando a privacidade dos dados transferidos entre requisições.
 
