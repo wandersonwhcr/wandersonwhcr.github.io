@@ -23,7 +23,7 @@ Primeiramente, temos que criar um repositório com o mesmo nome do subdomíno a 
 
 [https://github.com/wandersonwhcr/wandersonwhcr.github.io](https://github.com/wandersonwhcr/wandersonwhcr.github.io)
 
-Qualquer conteúdo estático adicionado ao _branch_ _master_ do repositório será publicado na página pessoal. Todavia, o gerenciamento do conteúdo estático de forma manual pode ser trabalhosa, principalmente quando trabalhamos com _layouts_. Eis que surge o Jekyll, um gerenciador de conteúdos estáticos.
+Qualquer conteúdo estático adicionado ao _branch_ `master` do repositório será publicado na página pessoal. Todavia, o gerenciamento do conteúdo estático de forma manual pode ser trabalhosa, principalmente quando trabalhamos com _layouts_. Eis que surge o Jekyll, um gerenciador de conteúdos estáticos.
 
 # Utilizando o Jekyll
 
@@ -44,3 +44,7 @@ jekyll serve
 Acessando o endereço `http://localhost:4000`, você poderá visualizar o conteúdo criado no formato HTML, conforme a figura abaixo.
 
 ![Conteúdo criado no formato HTML]({{ site.url }}/assets/2017-01-21-screenshot.png)
+
+# Publicando o Conteúdo
+
+Para publicar o conteúdo criado pelo Jekyll, basta versionar o código-fonte no _branch_ `master`, enviando-o ao GitHub. O conteúdo enviado será automaticamente convertido para HTML pelo serviço, pois o Jekyll é o _software_ para geração de páginas oficial do GitHub.
