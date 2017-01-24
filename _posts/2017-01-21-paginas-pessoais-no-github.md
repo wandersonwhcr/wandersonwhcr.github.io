@@ -43,7 +43,7 @@ jekyll serve
 
 Acessando o endereço `http://localhost:4000`, você poderá visualizar o conteúdo criado no formato HTML, conforme a figura abaixo.
 
-![Conteúdo criado no formato HTML]({{ site.url }}/assets/2017-01-21-screenshot.png)
+![Conteúdo criado no formato HTML]({{ site.url }}/assets/img/2017-01-21-screenshot.png)
 
 # Publicando o Conteúdo
 
