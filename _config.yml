@@ -1,19 +1,50 @@
-title: Wanderson Camargo
-email: wandersonwhcr@gmail.com
-description: >
-    Programador PHP Zend Framework
 baseurl: ""
 url: "https://wandersonwhcr.github.io"
-twitter_username: wandersonwhcr
-github_username:  wandersonwhcr
 
 host: 0.0.0.0
 port: 8000
 
+theme_settings:
+    title: Wanderson Camargo
+    gravatar: e909effb189b69d2363d035ae7b4240d
+    description: >
+        Programador PHP Zend Framework
+
+    header_text: >
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+    rss: false
+    email_address: wandersonwhcr@gmail.com
+    bitbucket: wandersonwhcr
+    facebook: wandersonwhcr
+    github: wandersonwhcr
+    linkedin: https://www.linkedin.com/in/wanderson-camargo-82b47797
+    twitter: wandersonwhcr
+
+    google_analytics:
+    disqus_shortname:
+    katex: true
+
+    str_follow_on: "Follow on"
+    str_rss_follow: "Follow RSS feed"
+    str_email: "e-mail"
+    str_next: "Próximo"
+    str_prev: "Anterior"
+    str_continue_reading: "Continue Lendo"
+
+    google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
+    post_navigation: false
+
+paginate: 5
+paginate_path: "blog/page:num"
+
 markdown: kramdown
-theme: minima
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: :compressed
 gems:
-  - jekyll-feed
+  - jekyll-paginate
 exclude:
   - Gemfile
   - Gemfile.lock
