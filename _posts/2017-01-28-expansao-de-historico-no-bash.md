@@ -104,3 +104,9 @@ Hello, World!
 ```
 
 Note que a expansão necessita do caractere de escape `\` na execução, tornando-se `\\!`. Caso queira alterar o `PS1` diretamente no arquivo `~/.bashrc`, não há necessidade de inclusão deste caractere.
+
+# Conclusão
+
+O Bash é um interpretador de comandos utilizado pelos usuários para execução de programas por CLI. Os comandos informados neste interpretador são registrados e podem ser consultados através do `history`, incluindo funcionalidades de expansão direta com `!` ou consulta reversa implementada pela biblioteca `readline`.
+
+Por apresentar a simples funcionalidade de execução de comandos, algumas vezes o Bash pode ser pouco estudado pelos usuários, fazendo com que algumas tarefas cotidianas tornem-se tediosas, caso desconheçam estes recursos simples.
