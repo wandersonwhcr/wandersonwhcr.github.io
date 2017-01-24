@@ -78,3 +78,16 @@ $ history -c
 $ history
     1  history
 ```
+
+# Consulta Reversa
+
+Como o Bash utiliza a biblioteca `readline` na compilação, podemos utilizar recursos como o <kbd>CTRL</kbd>+<kbd>R</kbd> para pesquisa reversa no histórico. Ao pressionar esta sequência de teclas e após o conteúdo necessário, será efetuada uma pesquisa reversa no histórico atual. Ao encontrar o comando necessário, basta pressionar a tecla <kbd>ENTER</kbd>.
+
+O exemplo abaixo limpa o histórico e executa 3 novos comandos no CLI. Após pressionar <kbd>CTRL</kbd>+<kbd>R</kbd>, efetuar a pesquisa por `ls` e pressionar a tecla <kbd>ENTER</kbd>, teremos executado o comando número 2 novamente.
+
+```bash
+$ history -c
+$ ls -alsh >/dev/null
+$ find . | grep one >/dev/null
+(reverse-i-search)`ls': ls -alsh >/dev/null
+```
