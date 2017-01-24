@@ -15,7 +15,7 @@ Para corrigir o problema, tive que executar 3 comandos distintos, para alterar a
 
 # Acessando o Histórico
 
-O [GNU/Bash](https://www.gnu.org/software/bash/) é um _shell_ compatível com `sh` que está disponível como padrão em muitas distribuições Linux. Facilitando o acesso para execução de programas no sistema operacional por CLI, também fornece comandos internos que facilitam sua utilização, como o `cd`.
+O [GNU Bash](https://www.gnu.org/software/bash/) é um _shell_ compatível com `sh` que está disponível como padrão em muitas distribuições Linux. Facilitando o acesso para execução de programas no sistema operacional por CLI, também fornece comandos internos que facilitam sua utilização, como o `cd`.
 
 O `history` é um comando interno ao Bash que fornece ao usuário a possibilidade de visualizar e executar novamente comandos previamente informados. O exemplo abaixo apresenta alguns comandos do dia a dia de qualquer usuário do Bash.
 
@@ -110,3 +110,15 @@ Note que a expansão necessita do caractere de escape `\` na execução, tornand
 O Bash é um interpretador de comandos utilizado pelos usuários para execução de programas por CLI. Os comandos informados neste interpretador são registrados e podem ser consultados através do `history`, incluindo funcionalidades de expansão direta com `!` ou consulta reversa implementada pela biblioteca `readline`.
 
 Por apresentar a simples funcionalidade de execução de comandos, algumas vezes o Bash pode ser pouco estudado pelos usuários, fazendo com que algumas tarefas cotidianas tornem-se tediosas, caso desconheçam estes recursos simples.
+
+# Referências
+
+* [GNU Bash](https://www.gnu.org/software/bash/)
+* [man.he.net: bash](http://man.he.net/?topic=bash&section=all)
+* [Lornajane Blog: Navigating Bash History with Ctrl+R](https://lornajane.net/posts/2011/navigating-bash-history-with-ctrlr)
+* [nixCraft: How to Change/Setup Bash Custom Prompt (PS1)](https://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html)
+
+# Veja Mais
+
+* [GNU Readline Library, The](https://cnswww.cns.cwru.edu/php/chet/readline/rltop.html)
+* [Bourne Shell (sh)](https://en.wikipedia.org/wiki/Bourne_shell)
