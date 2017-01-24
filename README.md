@@ -1,14 +1,7 @@
-# Type Theme
+# Wanderson Camargo
 
-![Default Type Theme blog](https://cloud.githubusercontent.com/assets/816965/5142407/19742e48-71d6-11e4-8d9d-fdfe010784f0.png)
+Este repositório armazena a página pessoal de Wanderson Camargo no GitHub, acessível em [https://wandersonwhcr.github.io](https://wandersonwhcr.github.io).
 
-A free and open-source [Jekyll](http://jekyllrb.com) theme. Great for blogs and easy to customize.
+## Licença
 
-## Get Started
-
-[Demo](https://rohanchandra.github.io/type-theme/)
-
-[Using Type](https://rohanchandra.github.io/project/type/)
-
-## License
-The MIT License (MIT)
+O conteúdo do repositório é _opensource_ e utiliza a Licença BSD-3-Clause, descrita no arquivo [`LICENSE`](//github.com/wandersonwhcr/wandersonwhcr.github.io/blob/master/LICENSE).
