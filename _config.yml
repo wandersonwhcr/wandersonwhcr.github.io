@@ -22,7 +22,7 @@ theme_settings:
     twitter: wandersonwhcr
 
     google_analytics:
-    disqus_shortname:
+    disqus_shortname: wandersonwhcr
     katex: true
 
     str_follow_on: "Follow on"
