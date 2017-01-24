@@ -11,7 +11,7 @@ theme_settings:
         Programador PHP Zend Framework
 
     header_text: >
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>"Computer Science is no more about computers than Astronomy is about telescopes." - DIJKSTRA, E. W.</p>
 
     rss: false
     email_address: wandersonwhcr@gmail.com
