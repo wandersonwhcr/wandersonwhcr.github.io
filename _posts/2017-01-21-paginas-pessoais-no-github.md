@@ -65,13 +65,14 @@ Mesmo que estes sistemas sejam disponibilizados de forma gratuíta na Internet, 
 
 Além disso, o serviço é **gratuíto** e disponibiliza todas as páginas, por padrão, utilizando o protocolo HTTPS, aumentando a privacidade dos dados transferidos entre requisições.
 
-Por fim, as páginas do GitHub não são limitadas ao Jekyll, podendo ser geradas localmente e versionadas por qualquer gerenciador de conteúdo estático, como o [Couscous](http://couscous.io/) ou o [MkDocs](http://www.mkdocs.org/). Contudo, como não há suporte pelo GitHub para estas ferramentas, o conteúdo necessita ser gerado pelo desenvolvedor e versionado junto ao código-fonte.
+Por fim, as páginas do GitHub não são limitadas ao Jekyll, podendo ser geradas localmente e versionadas por qualquer gerenciador de conteúdo estático, como o [Couscous](http://couscous.io/) ou o [MkDocs](http://www.mkdocs.org/). Contudo, como não há suporte pelo GitHub para estas ferramentas, o conteúdo necessita ser gerado pelo desenvolvedor e versionado junto ao código-fonte, contrariando Mason (2005, p. 13, tradução livre), pois "se um arquivo pode ser reconstruído de outros arquivos, então o seu armazenamento será simplesmente uma duplicata".
 
 # Referências
 
 * [Jekyll: Simple, blog-aware and static sites](https://jekyllrb.com/)
 * [GitHub Pages: Websites for you and your projects, hosted directly from GitHub repository](https://pages.github.com/)
 * [Using Jekyll as a static site generator with GitHub Pages](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/)
+* MASON, M. _Pragmatic Version Control Using Subversion_. The Pragmatic Programmers (2005).
 
 # Veja Mais
 
