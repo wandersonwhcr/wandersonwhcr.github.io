@@ -91,3 +91,16 @@ $ ls -alsh >/dev/null
 $ find . | grep one >/dev/null
 (reverse-i-search)`ls': ls -alsh >/dev/null
 ```
+
+# PS1 com Histórico
+
+Também é possível adicionar a posição atual no histórico na variável `PS1` do Bash, através da expansão `\!`. O exemplo abaixo altera o `PS1` em tempo de execução, adicionando ao final da linha a posição atual do histórico.
+
+```bash
+$ history -c
+$ PS1="$PS1[\\!] "
+$ [2] echo "Hello, World!"
+Hello, World!
+```
+
+Note que a expansão necessita do caractere de escape `\` na execução, tornando-se `\\!`. Caso queira alterar o `PS1` diretamente no arquivo `~/.bashrc`, não há necessidade de inclusão deste caractere.
