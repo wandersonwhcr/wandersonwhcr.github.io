@@ -4,7 +4,7 @@ title: Sobre
 permalink: /sobre
 ---
 
-> "An algorithm must be seen to be believed." --- Knuth, Donald E.
+> "An algorithm must be seen to be believed." --- KNUTH, D. E.
 
 Olá. Meu nome é Wanderson Camargo e sou programador, formado em Ciência da
 Computação pela Universidade do Vale do Rio dos Sinos --- UNISINOS, e em Técnico
