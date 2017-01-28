@@ -101,6 +101,25 @@ Com a inclusão do _pseudotype_ `iterable` na versão 7.1 do PHP, a verificaçã
 
 Em resumo, a análise de tipagem do parâmetro `$options` fica a cargo da própria linguagem de programação, efetuando as mesmas verificações do exemplo anterior. Caso o parâmetro `$options` não seja do tipo básico `array` ou um objeto de uma classe que não implementa a _interface_ `Traversable`, o PHP efetuará um `throw` de uma exceção do tipo `TypeError`.
 
+## Verificando Manualmente
+
+Junto com o _pseudotype_ `iterable`, adicionou-se a função `is_iterable`, que verifica se o argumento passado é do tipo `iterable`. O próximo código-fonte apresenta um exemplo de utilização desta função.
+
+```php
+<?php
+
+var_dump(is_iterable([])); // true
+var_dump(is_iterable(new ArrayIterator())); // true
+var_dump(is_iterable(1)); // false
+var_dump(is_iterable('foobar')); // false
+```
+
+## Conclusão
+
+A criação do _pseudotype_ `iterator` faz com que o código-fonte possua menos verificações de tipagem, fazendo com que ele seja mais robusto com os próprios recursos da linguagem de programação. Todavia, na data quando este artigo foi redigido, a documentação do PHP não recebeu informações sobre este novo recurso, somente apresentando a RFC de idealização.
+
+Com a inclusão deste novo tipo, pode-se dizer que os autores do PHP estão abertos para mudanças, melhorando, assim, a tipagem fraca encontrada na linguagem.
+
 ## Referências
 
 * [PHP 7.1.0 ChangeLog](http://php.net/ChangeLog-7.php#7.1.0)
