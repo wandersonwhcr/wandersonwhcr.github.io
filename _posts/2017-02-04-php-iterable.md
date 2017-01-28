@@ -50,8 +50,9 @@ class Bar
     /**
      * Configura um Conjunto de Opções
      *
-     * @param  array|Traversable Valores para Configuração
-     * @return self              Próprio Objeto para Encadeamento
+     * @param  array|Traversable        Valores para Configuração
+     * @throws InvalidArgumentException Opções com Tipo Inválido
+     * @return self                     Próprio Objeto para Encadeamento
      */
     public function setOptions($options) : self
     {
@@ -68,3 +69,46 @@ class Bar
     }
 }
 ```
+
+Para tornar o código robusto, deve-se adicionar uma verificação antes da estrutura _foreach_, verificando se a variável `$options` é do tipo básico `array` ou é um objeto que pertence a uma classe que possui a _interface_ `Traversable` implementada. Com esta condicional, há a garantia de que a iteração será executada com sucesso.
+
+## Aplicando o Iterable
+
+Com a inclusão do _pseudotype_ `iterable` na versão 7.1 do PHP, a verificação de tipo iterável pode ser efetuada diretamente pela linguagem de programação, melhorando a compreensão do código-fonte. O método `Foo\Bar::setOptions` pode ser definido conforme o exemplo abaixo.
+
+```php
+<?php
+    // ...
+
+    /**
+     * Configura um Conjunto de Opções
+     *
+     * @param  iterable Valores para Configuração
+     * @return self     Próprio Objeto para Encadeamento
+     */
+    public function setOptions(iterable $options) : self
+    {
+        // Processamento
+        foreach ($options as $name => $value) {
+            $this->setOptions($name, $value);
+        }
+        // Encadeamento
+        return $this;
+    }
+
+    // ...
+```
+
+Em resumo, a análise de tipagem do parâmetro `$options` fica a cargo da própria linguagem de programação, efetuando as mesmas verificações do exemplo anterior. Caso o parâmetro `$options` não seja do tipo básico `array` ou um objeto de uma classe que não implementa a _interface_ `Traversable`, o PHP efetuará um `throw` de uma exceção do tipo `TypeError`.
+
+## Referências
+
+* [PHP 7.1.0 ChangeLog](http://php.net/ChangeLog-7.php#7.1.0)
+* [PHP RFC: Iterable](https://wiki.php.net/rfc/iterable)
+* [PHP TypeError Manual](https://secure.php.net/manual/en/class.typeerror.php)
+
+## Veja Mais
+
+* [PHP Traversable](http://php.net/manual/en/class.traversable.php)
+* [PHP Callbacks and Callables](https://secure.php.net/manual/en/language.types.callable.php)
+* [What's New in PHP 7.1: Iterable Types](https://www.youtube.com/watch?v=XKyGOxfm_cU)
