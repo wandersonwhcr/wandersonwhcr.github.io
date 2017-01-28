@@ -9,7 +9,7 @@ Com a disponibilização do PHP 7.1, novos recursos foram adicionados à linguag
 
 ## Introdução
 
-O _pseudotype_ `iterable` foi adicionado a partir do aceite da [PHP RFC: Iterable](https://wiki.php.net/rfc/iterable), baseada no _pseudotype_ `callable` incluído na versão 5.4. Um _pseudotype_ (pseudotipo, em tradução livre), é um tipo utilizado pelo PHP para efetuar verificações de tipagem em tempo de execução, sendo que o `iterable` é usado para verificação de elementos que são iteráveis e podem ser utilizados como entrada em estruturas _foreach_.
+O _pseudotype_ `iterable` foi adicionado a partir do aceite da [PHP RFC: Iterable](https://wiki.php.net/rfc/iterable), baseada no _pseudotype_ `callable` incluído na versão 5.4. Um _pseudotype_ (pseudotipo, em tradução livre), é um tipo utilizado pelo PHP para efetuar verificações de tipagem em tempo de execução, sendo que o `iterable` é usado para verificação de elementos que devem ser iteráveis e podem ser utilizados como entrada em estruturas _foreach_.
 
 ## Antes do Iterable
 
@@ -116,7 +116,7 @@ var_dump(is_iterable('foobar')); // false
 
 ## Conclusão
 
-A criação do _pseudotype_ `iterator` faz com que o código-fonte possua menos verificações de tipagem, fazendo com que ele seja mais robusto com os próprios recursos da linguagem de programação. Todavia, na data quando este artigo foi redigido, a documentação do PHP não recebeu informações sobre este novo recurso, somente apresentando a RFC de idealização.
+A criação do _pseudotype_ `iterator` faz com que o código-fonte possua menos verificações de tipagem, fazendo com que ele seja mais robusto e compreensível através dos próprios recursos da linguagem de programação. Todavia, na data quando este artigo foi redigido, a documentação do PHP não recebeu informações sobre este novo recurso, somente apresentando a RFC de idealização.
 
 Com a inclusão deste novo tipo, pode-se dizer que os autores do PHP estão abertos para mudanças, melhorando, assim, a tipagem fraca encontrada na linguagem.
 
