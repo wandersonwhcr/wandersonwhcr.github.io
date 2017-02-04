@@ -135,6 +135,7 @@ Pressionando a sequência de teclas <kbd>CTRL</kbd>+<kbd>R</kbd> e informando o 
 * [man.he.net: bash](http://man.he.net/?topic=bash&section=all)
 * [Lornajane Blog: Navigating Bash History with Ctrl+R](https://lornajane.net/posts/2011/navigating-bash-history-with-ctrlr)
 * [nixCraft: How to Change/Setup Bash Custom Prompt (PS1)](https://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html)
+* [Rótulos na Linha de Comando](https://guaracy.github.io/posts/rotulos-na-linha-de-comando/) por [Guaracy Monteiro](https://guaracy.github.io/)
 
 # Veja Mais
 
