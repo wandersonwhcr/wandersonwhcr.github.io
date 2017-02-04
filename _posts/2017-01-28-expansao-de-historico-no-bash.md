@@ -111,12 +111,31 @@ O Bash é um interpretador de comandos utilizado pelos usuários para execução
 
 Por apresentar a simples funcionalidade de execução de comandos, algumas vezes o Bash pode ser pouco estudado pelos usuários, fazendo com que algumas tarefas cotidianas tornem-se tediosas, caso desconheçam estes recursos simples.
 
+## Observações
+
+Conforme [comentário](#comment-3129293460) do leitor [Guaracy Monteiro](https://guaracy.github.io/) neste artigo, pode-se [adicionar rótulos na linha de comando](https://guaracy.github.io/posts/rotulos-na-linha-de-comando/) através do caractere _hash_ (`#`), tratando-os como _hashtags_ para facilitar a pesquisa. O exemplo abaixo apresenta comandos simples com exemplos deste recurso.
+
+```bash
+$ ls -alsh #list
+$ find . -name '*.mp3' #search #mp3
+$ touch foobar #reset
+```
+
+Todas as informações após o caractere `#` serão tratadas como comentários pelo Bash. Porém, estes comentários podem ser encontrados através da [consulta reversa](#consulta-reversa) e <kbd>CTRL</kbd>+<kbd>R</kbd>. O próximo exemplo apresenta uma possível utilização de consulta de comandos com a _hashtag_ `#search`.
+
+```bash
+(reverse-i-search)`#search': find . -name '*.mp3' #search #mp3
+```
+
+Pressionando a sequência de teclas <kbd>CTRL</kbd>+<kbd>R</kbd> e informando o conteúdo de pesquisa `#search`, encontra-se o comando `find` para pesquisa de arquivos com a extensão `mp3`, informado anteriormente com a _hashtag_ da pesquisa.
+
 ## Referências
 
 * [GNU Bash](https://www.gnu.org/software/bash/)
 * [man.he.net: bash](http://man.he.net/?topic=bash&section=all)
 * [Lornajane Blog: Navigating Bash History with Ctrl+R](https://lornajane.net/posts/2011/navigating-bash-history-with-ctrlr)
 * [nixCraft: How to Change/Setup Bash Custom Prompt (PS1)](https://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html)
+* [Rótulos na Linha de Comando](https://guaracy.github.io/posts/rotulos-na-linha-de-comando/) por [Guaracy Monteiro](https://guaracy.github.io/)
 
 ## Veja Mais
 
