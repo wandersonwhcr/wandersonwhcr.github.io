@@ -2,8 +2,13 @@
 <script src="{{ "/assets/js/katex_init.js" | prepend: site.baseurl }}"></script>
 {% endif %}
 
-{% if site.theme_settings.footer_text %}
 <footer class="site-footer">
-	<p class="text">{{ site.theme_settings.footer_text }}</p>
+    {% if site.theme_settings.footer_text %}
+        <p class="text">{{ site.theme_settings.footer_text }}</p>
+    {% endif %}
+    <p class="text">
+        <a href="http://www.adfreeblog.org/" target="_blank">
+            <img src="{{ "/assets/img/adfreeblog.jpg" | prepend: site.baseurl }}">
+        </a>
+    </p>
 </footer>
-{% endif %}
