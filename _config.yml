@@ -39,7 +39,6 @@ paginate: 5
 paginate_path: "blog/page:num"
 
 languages: ['pt-br']
-language_data: data.lang.%%
 
 markdown: kramdown
 highlighter: rouge
@@ -48,7 +47,6 @@ sass:
   style: :compressed
 gems:
   - jekyll-paginate
-  - jekyll-language-plugin
 exclude:
   - Gemfile
   - Gemfile.lock
