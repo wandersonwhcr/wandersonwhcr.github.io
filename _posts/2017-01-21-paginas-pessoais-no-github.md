@@ -2,6 +2,7 @@
 layout: post
 title: "Páginas Pessoais no GitHub"
 date: 2017-01-21
+language: pt-br
 category: GitHub
 ---
 

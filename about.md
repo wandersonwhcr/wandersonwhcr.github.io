@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Sobre
-permalink: /sobre
+language: pt-br
+permalink: /sobre.html
 ---
 
 > "An algorithm must be seen to be believed." --- KNUTH, D. E.

@@ -2,6 +2,7 @@
 layout: post
 title: "Expansão de Histórico no Bash"
 date: 2017-01-28
+language: pt-br
 category: Linux
 ---
 
