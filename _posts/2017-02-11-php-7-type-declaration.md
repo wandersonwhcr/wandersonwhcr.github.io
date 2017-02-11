@@ -249,3 +249,53 @@ class Bar
     // ...
 }
 ```
+
+## Erros Comuns
+
+Um erro comum, durante o início da utilização da declaração de tipos do PHP 7 pelo programador, é utilizar o tipo `boolean`. Todavia, o tipo `boolean` não é um tipo básico do PHP, mas sim o `bool`. Ainda, quando adiciona-se o tipo `boolean` como declaração de tipo, o PHP irá interpretar esta informação como o **nome de uma classe** e não como o tipo básico.
+
+```php
+<?php
+
+(function (boolean $checked) {
+    var_dump($checked);
+})(true);
+
+/*
+Fatal error: Uncaught TypeError:
+Argument 1 passed to {closure}() must be an instance of boolean, boolean given,
+called in [...][...] on line 5 and defined in [...][...]:3
+
+Stack trace:
+#0 [...][...](5): {closure}(true)
+#1 {main}
+  thrown in [...][...] on line 3
+*/
+```
+
+Ainda, outro caso comum é a conversão que não é efetuada entre alguns tipos, como de `array` vazio para `boolean` `false`, contrariando uma **conversão explícita**, possível na linguagem.
+
+```php
+<?php
+
+$container = [];
+$converted = (bool) $container;
+
+var_dump($converted);
+
+(function (bool $converted) {
+    var_dump($converted);
+})($container);
+
+/*
+bool(false)
+
+Fatal error: Uncaught TypeError:
+Argument 1 passed to {closure}() must be of the type boolean, array given,
+called in [...][...] on line 10 and defined in [...][...]:8
+Stack trace:
+#0 [...][...](10): {closure}(Array)
+#1 {main}
+  thrown in [...][...] on line 8
+*/
+```
