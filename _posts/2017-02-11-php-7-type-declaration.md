@@ -9,7 +9,7 @@ Este documento apresenta as novidades do PHP 7 sobre tipos de declaração de pa
 
 ## Introdução
 
-Além de melhorias de desempenho, o PHP 7 trouxe novidades com relação à estrutura da linguagem. Agora, pode-se declarar parâmetros de métodos e funções com tipos básicos da linguagem, e não somente os tipos `array`, `object`, `self`, _pseudotypes_, classes ou interfaces.
+Além de melhorias de desempenho, o PHP 7 trouxe novidades com relação à estrutura da linguagem. Agora, pode-se declarar parâmetros de métodos e funções com tipos básicos.
 
 Esta técnica, anteriormente conhecida como _type hinting_, teve seu nome modificado para _type declarations_ (declarações de tipos, em tradução livre), possivelmente porque agora é possível utilizar os tipos `bool`, `float`, `int` e `string`.
 
@@ -131,7 +131,7 @@ class Bar
 }
 ```
 
-Nota-se que as verificações de tipos de dados informados como parâmetros ficam a cargo do programador, deixando o código-fonte pouco robusto. Para cada método informado, caso exista a necessidade de que certo tipo específico de dado seja apresentado, adiciona-se uma condicional que verifica o tipo correto, e, em caso de erro, atira-se uma exceção do tipo `InvalidArgumentException`.
+Nota-se que as verificações de tipos de dados informados como parâmetros ficam a cargo do programador. Para cada método informado, caso exista a necessidade de que certo tipo específico de dado seja apresentado, adiciona-se uma condicional que verifica o tipo correto, e, em caso de erro, atira-se uma exceção do tipo `InvalidArgumentException`.
 
 ## Aplicando Declarações de Tipos
 
@@ -200,7 +200,7 @@ Agora no PHP 7 é possível utilizar declarações para garantir a passagem dos 
     // ...
 ```
 
-Nota-se, agora, que os tipos básicos podem ser adicionados para garantir a tipagem da informação. Quando um parâmetro pertence a outro tipo, este sofre um _type casting_ ou conversão de tipo, em tradução livre, pela própria linguagem. Ainda, se o PHP não conseguir efetuar a conversão, uma exceção do tipo `TypeError` é apresentada pela linguagem em tempo de execução.
+Nota-se, agora, que os tipos básicos podem ser adicionados para garantir a tipagem da informação. Quando um parâmetro pertence a outro tipo, este sofre um _type coercing_ ou coerção de tipo, em tradução livre, pela própria linguagem. Ainda, se o PHP não conseguir efetuar a coerção, uma exceção do tipo `TypeError` é apresentada pela linguagem em tempo de execução.
 
 ```php
 <?php
@@ -228,11 +228,11 @@ object(Foo\Bar)#1 (4) {
 */
 ```
 
-O exemplo acima demonstra a utilização de um objeto da classe `Foo\Bar`, configurando-o com suporte a declarações de tipo disponíveis. Constata-se que os tipos das variáveis foram convertidos automaticamente pelo PHP, conforme declarações. Ainda, alguns casos demonstram perda de informação, como no método `Foo\Bar::setLimit`, onde há a conversão do tipo `float` com o valor `3.1415` para o tipo `int` com o valor `3`.
+O exemplo acima demonstra a utilização de um objeto da classe `Foo\Bar`, configurando-o com suporte a declarações de tipo disponíveis. Constata-se que os tipos das variáveis foram convertidos automaticamente pelo PHP, conforme declarações. Ainda, alguns casos demonstram perda de informação, como no método `Foo\Bar::setLimit`, onde há a conversão do tipo `float` com o valor `3.1415` para o tipo `int` com o valor `3`, característica da coerção.
 
 ## Aumentando a Confiabilidade
 
-Para evitar que seja efetuada a conversão automática de tipos, mesmo em casos que esta ação é possível, pode-se adicionar uma declaração, por arquivo, informando ao PHP que todos as declarações de tipo devem ser estritamente verificadas. Quando o valor informado é incondizente com o tipo configurado, uma exceção do tipo `TypeError` é atirada em tempo de execução.
+Para evitar que seja efetuada a coerção automática de tipos, mesmo em casos que esta ação é possível, pode-se adicionar uma declaração, por arquivo, informando ao PHP que todas as declarações de tipo devem ser estritamente verificadas. Quando o valor informado é incondizente com o tipo configurado, uma exceção do tipo `TypeError` é atirada em tempo de execução.
 
 ```php
 <?php
