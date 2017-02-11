@@ -312,3 +312,9 @@ Assim, reitero, que o conhecimento profundo de qualquer linguagem é extremament
 
 * [PHP: Type Declarations](http://php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration)
 * [PHP: Strict Typing](http://php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration.strict)
+
+## Veja Mais
+
+* [PHP 7 Scalar Type Hinting Finally Approved](https://www.phpclasses.org/blog/post/269-PHP-7-Scalar-Type-Hinting-Finally-Approved.html)
+* [An Introduction to PHP 7 Type Declarations](https://denbeke.be/blog/programming/an-introduction-to-php-7-type-declarations/) por [Mathias Beke](https://denbeke.be/)
+* [PHP 7 Type Hinting](https://www.youtube.com/watch?v=qRAkACzk3sk) no YouTube
