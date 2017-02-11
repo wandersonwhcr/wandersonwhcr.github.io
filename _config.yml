@@ -38,8 +38,6 @@ theme_settings:
 paginate: 5
 paginate_path: "blog/page:num"
 
-languages: ['pt-br']
-
 markdown: kramdown
 highlighter: rouge
 sass:
