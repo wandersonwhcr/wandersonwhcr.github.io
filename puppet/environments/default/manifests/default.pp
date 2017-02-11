@@ -98,12 +98,6 @@ exec { "ruby":
     require => Exec["ruby : source : make"],
 }
 
-exec { "jekyll":
-    command => "gem install jekyll",
-    creates => "/usr/local/bin/jekyll",
-    require => Exec["ruby"],
-}
-
 exec { "bundler":
     command => "gem install bundler",
     creates => "/usr/local/bin/bundler",
