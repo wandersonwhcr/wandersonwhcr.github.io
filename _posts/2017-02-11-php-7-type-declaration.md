@@ -307,3 +307,8 @@ A inclusão dos tipos básicos como declarações de parâmetros em métodos e f
 Por outro lado, existem ainda alguns erros comuns que podem causar problemas durante o desenvolvimento, principalmente por programadores iniciantes na linguagem e que desconhecem alguns estranhos comportamentos internos.
 
 Assim, reitero, que o conhecimento profundo de qualquer linguagem é extremamente necessário para programadores que buscam desenvolver códigos mais saudáveis e com menos _bugs_.
+
+## Referências
+
+* [PHP: Type Declarations](http://php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration)
+* [PHP: Strict Typing](http://php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration.strict)
