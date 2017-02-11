@@ -202,9 +202,37 @@ Agora no PHP 7 é possível utilizar declarações para garantir a passagem dos 
 
 Nota-se, agora, que os tipos básicos podem ser adicionados para garantir a tipagem da informação. Quando um parâmetro pertence a outro tipo, este sofre um _type casting_ ou conversão de tipo, em tradução livre, pela própria linguagem. Ainda, se o PHP não conseguir efetuar a conversão, uma exceção do tipo `TypeError` é apresentada pela linguagem em tempo de execução.
 
+```php
+<?php
+
+$element = new Foo\Bar();
+
+$element
+    ->setName(Foo\Bar::class)
+    ->setModifier(1)
+    ->setAscending('0')
+    ->setLimit(3.1415);
+
+var_dump($element);
+/*
+object(Foo\Bar)#1 (4) {
+  ["name":protected]=>
+  string(7) "Foo\Bar"
+  ["modifier":protected]=>
+  float(1)
+  ["ascending":protected]=>
+  bool(false)
+  ["limit":protected]=>
+  int(3)
+}
+*/
+```
+
+O exemplo acima demonstra a utilização de um objeto da classe `Foo\Bar`, configurando-o com suporte a declarações de tipo disponíveis. Constata-se que os tipos das variáveis foram convertidos automaticamente pelo PHP, conforme declarações. Ainda, alguns casos demonstram perda de informação, como no método `Foo\Bar::setLimit`, onde há a conversão do tipo `float` com o valor `3.1415` para o tipo `int` com o valor `3`.
+
 ## Aumentando a Confiabilidade
 
-Para evitar que seja efetuada a conversão automática de tipos, mesmo em casos que esta ação é possível, pode-se adicionar uma declaração, por arquivo, informando ao PHP que todos as declarações de tipo devem ser estritamente verificadas.
+Para evitar que seja efetuada a conversão automática de tipos, mesmo em casos que esta ação é possível, pode-se adicionar uma declaração, por arquivo, informando ao PHP que todos as declarações de tipo devem ser estritamente verificadas. Quando o valor informado é incondizente com o tipo configurado, uma exceção do tipo `TypeError` é atirada em tempo de execução.
 
 ```php
 <?php
