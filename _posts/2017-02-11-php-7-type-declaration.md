@@ -132,3 +132,72 @@ class Bar
 ```
 
 Nota-se que as verificações de tipos de dados informados como parâmetros ficam a cargo do programador, deixando o código-fonte pouco robusto. Para cada método informado, caso exista a necessidade de que certo tipo específico de dado seja apresentado, adiciona-se uma condicional que verifica o tipo correto, e, em caso de erro, atira-se uma exceção do tipo `InvalidArgumentException`.
+
+## Aplicando Declarações de Tipos
+
+Agora no PHP 7 é possível utilizar declarações para garantir a passagem dos tipos básicos. O próximo código-fonte contém a mesma estrutura do exemplo anterior, porém com as novas declarações de tipo disponíveis.
+
+```php
+<?php
+    // ...
+
+    /**
+     * Configura o Nome
+     *
+     * @param  string $name Valor para Configuração
+     * @return self   Próprio Objeto para Encadeamento
+     */
+    public function setName(string $name) : self
+    {
+        // Configuração
+        $this->name = $name;
+        // Encadeamento
+        return $this;
+    }
+
+    /**
+     * Configura o Modificador
+     *
+     * @param  float $modifier Valor para Configuração
+     * @return self  Próprio Objeto para Encadeamento
+     */
+    public function setModifier(float $modifier) : self
+    {
+        // Configuração
+        $this->modifier = $modifier;
+        // Encadeamento
+        return $this;
+    }
+
+    /**
+     * Configura a Ordem Crescente
+     *
+     * @param  bool $ascending Valor para Configuração
+     * @return self Próprio Objeto para Encadeamento
+     */
+    public function setAscending(bool $ascending) : self
+    {
+        // Configuração
+        $this->ascending = $ascending;
+        // Encadeamento
+        return $this;
+    }
+
+    /**
+     * Configura o Limite
+     *
+     * @param  int  $limit Valor para Configuração
+     * @return self Próprio Objeto para Encadeamento
+     */
+    public function setLimit(int $limit) : self
+    {
+        // Configuração
+        $this->limit = $limit;
+        // Encadeamento
+        return $this;
+    }
+
+    // ...
+```
+
+Nota-se, agora, que os tipos básicos podem ser adicionados para garantir a tipagem da informação. Quando um parâmetro pertence a outro tipo, este sofre um _type casting_ ou conversão de tipo, em tradução livre, pela própria linguagem. Ainda, se o PHP não conseguir efetuar a conversão, uma exceção do tipo `TypeError` é apresentada pela linguagem em tempo de execução.
