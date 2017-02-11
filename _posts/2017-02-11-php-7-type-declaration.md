@@ -299,3 +299,11 @@ Stack trace:
   thrown in [...][...] on line 8
 */
 ```
+
+## Conclusão
+
+A inclusão dos tipos básicos como declarações de parâmetros em métodos e funções do PHP melhora a legibilidade do código-fonte, uma vez que o programa necessita de menos verificações explícitas em seu conteúdo para garantir a tipagem dos valores. Ainda, este novo recurso torna a execução mais robusta, fazendo com que a própria linguagem efetue as análises necessárias em tempo de execução.
+
+Por outro lado, existem ainda alguns erros comuns que podem causar problemas durante o desenvolvimento, principalmente por programadores iniciantes na linguagem e que desconhecem alguns estranhos comportamentos internos.
+
+Assim, reitero, que o conhecimento profundo de qualquer linguagem é extremamente necessário para programadores que buscam desenvolver códigos mais saudáveis e com menos _bugs_.
