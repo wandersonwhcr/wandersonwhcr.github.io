@@ -10,7 +10,12 @@ layout: default
     </p>
   </header>
   <section class="post-content">{{ content }}</section>
-  {% include share-page.html %}
+  <footer>
+    {% include share-page.html %}
+    <p class="license">
+      {% include license.html %}
+    </p>
+  </footer>
 </article>
 
 <!-- Post navigation -->
