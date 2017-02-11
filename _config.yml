@@ -13,7 +13,7 @@ theme_settings:
     header_text: >
         <p>"Computer Science is no more about computers than Astronomy is about telescopes." — DIJKSTRA, E. W.</p>
 
-    rss: false
+    rss: true
     email_address: wandersonwhcr@gmail.com
     bitbucket: wandersonwhcr
     facebook: wandersonwhcr
