@@ -5,7 +5,7 @@ layout: default
   <header style="background-image: url('{{ site.baseurl }}/{{ page.feature-img }}')">
     <h1 class="title">{{ page.title }}</h1>
     <p class="meta">
-    {{ page.date | tdate: 'post.date_format' }}
+    {% include date.html date=page.date %}
     {% if page.author %} - {{ page.author }}{% endif %}
     </p>
   </header>

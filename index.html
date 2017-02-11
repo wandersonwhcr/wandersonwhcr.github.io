@@ -22,7 +22,7 @@ permalink: /index.html
           </a>
         </h1>
         <p class="meta">
-          {{ post.date | tdate: "post.date_format" }}
+          {% include date.html date=post.date %}
         </p>
       </header>
       <div class="excerpt">

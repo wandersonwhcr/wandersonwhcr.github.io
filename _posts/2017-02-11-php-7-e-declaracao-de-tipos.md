@@ -2,7 +2,6 @@
 layout: post
 title: "PHP 7 e Declaração de Tipos"
 date: 2017-02-11
-language: pt-br
 category: PHP
 ---
 
