@@ -201,3 +201,23 @@ Agora no PHP 7 é possível utilizar declarações para garantir a passagem dos 
 ```
 
 Nota-se, agora, que os tipos básicos podem ser adicionados para garantir a tipagem da informação. Quando um parâmetro pertence a outro tipo, este sofre um _type casting_ ou conversão de tipo, em tradução livre, pela própria linguagem. Ainda, se o PHP não conseguir efetuar a conversão, uma exceção do tipo `TypeError` é apresentada pela linguagem em tempo de execução.
+
+## Aumentando a Confiabilidade
+
+Para evitar que seja efetuada a conversão automática de tipos, mesmo em casos que esta ação é possível, pode-se adicionar uma declaração, por arquivo, informando ao PHP que todos as declarações de tipo devem ser estritamente verificadas.
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Foo;
+
+/**
+ * Classe de Exemplo
+ */
+class Bar
+{
+    // ...
+}
+```
