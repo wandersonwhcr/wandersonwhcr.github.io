@@ -9,7 +9,7 @@ Este texto apresenta uma forma de efetuar o _download_ da última versão do Fir
 
 ## Introdução
 
-Segundo o [DistroWatch](https://distrowatch.com/), há 288 distribuições GNU/Linux ou BSD conhecidas. Dentre estas distribuições, existem aquelas que possuem ambientes amigáveis ao usuário, como [Ubuntu](https://www.ubuntu.com/), [openSUSE](https://pt.opensuse.org/) e [Fedora](https://getfedora.org/pt_BR/), que disponibilizam todos os aplicativos básicos durante a instalação do sistema operacional.
+Segundo o [DistroWatch](https://distrowatch.com/), há 801 distribuições GNU/Linux. Dentre estas distribuições, existem aquelas que possuem ambientes amigáveis ao usuário, como [Ubuntu](https://www.ubuntu.com/), [openSUSE](https://pt.opensuse.org/) e [Fedora](https://getfedora.org/pt_BR/), que disponibilizam todos os aplicativos básicos durante a instalação do sistema operacional.
 
 Todavia, estes recursos adicionais, que tornam o ambiente mais amigável, consomem recursos desnecessários do _hardware_ onde estão instalados. Quando este assunto se torna prioridade, existem outras distribuições, mais simples e completamente funcionais, que deixam a cargo do usuário a instalação de pacotes adicionais, como [Debian](https://www.debian.org/), [Alpine](https://alpinelinux.org/) e [Arch Linux](https://www.archlinux.org/).
 
