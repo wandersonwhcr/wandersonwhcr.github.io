@@ -81,9 +81,9 @@ $ history
 
 ## Consulta Reversa
 
-Como o Bash utiliza a biblioteca `readline` na compilação, podemos utilizar recursos como o <kbd>CTRL</kbd>+<kbd>R</kbd> para pesquisa reversa no histórico. Ao pressionar esta sequência de teclas e após o conteúdo necessário, será efetuada uma pesquisa reversa no histórico atual. Ao encontrar o comando necessário, basta pressionar a tecla <kbd>ENTER</kbd>.
+Como o Bash utiliza a biblioteca `readline` na compilação, podemos utilizar recursos como o <kbd>CTRL</kbd><kbd>R</kbd> para pesquisa reversa no histórico. Ao pressionar esta sequência de teclas e após o conteúdo necessário, será efetuada uma pesquisa reversa no histórico atual. Ao encontrar o comando necessário, basta pressionar a tecla <kbd>ENTER</kbd>.
 
-O exemplo abaixo limpa o histórico e executa 3 novos comandos no CLI. Após pressionar <kbd>CTRL</kbd>+<kbd>R</kbd>, efetuar a pesquisa por `ls` e pressionar a tecla <kbd>ENTER</kbd>, teremos executado o comando número 2 novamente.
+O exemplo abaixo limpa o histórico e executa 3 novos comandos no CLI. Após pressionar <kbd>CTRL</kbd><kbd>R</kbd>, efetuar a pesquisa por `ls` e pressionar a tecla <kbd>ENTER</kbd>, teremos executado o comando número 2 novamente.
 
 ```bash
 $ history -c
@@ -121,13 +121,13 @@ $ find . -name '*.mp3' #search #mp3
 $ touch foobar #reset
 ```
 
-Todas as informações após o caractere `#` serão tratadas como comentários pelo Bash. Porém, estes comentários podem ser encontrados através da [consulta reversa](#consulta-reversa) e <kbd>CTRL</kbd>+<kbd>R</kbd>. O próximo exemplo apresenta uma possível utilização de consulta de comandos com a _hashtag_ `#search`.
+Todas as informações após o caractere `#` serão tratadas como comentários pelo Bash. Porém, estes comentários podem ser encontrados através da [consulta reversa](#consulta-reversa) e <kbd>CTRL</kbd><kbd>R</kbd>. O próximo exemplo apresenta uma possível utilização de consulta de comandos com a _hashtag_ `#search`.
 
 ```bash
 (reverse-i-search)`#search': find . -name '*.mp3' #search #mp3
 ```
 
-Pressionando a sequência de teclas <kbd>CTRL</kbd>+<kbd>R</kbd> e informando o conteúdo de pesquisa `#search`, encontra-se o comando `find` para pesquisa de arquivos com a extensão `mp3`, informado anteriormente com a _hashtag_ da pesquisa.
+Pressionando a sequência de teclas <kbd>CTRL</kbd><kbd>R</kbd> e informando o conteúdo de pesquisa `#search`, encontra-se o comando `find` para pesquisa de arquivos com a extensão `mp3`, informado anteriormente com a _hashtag_ da pesquisa.
 
 ## Referências
 
