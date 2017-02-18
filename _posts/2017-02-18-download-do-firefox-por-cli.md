@@ -60,6 +60,18 @@ Existem documentações que estão amplamente disponíveis, com fácil acesso, e
 
 Quando os Vogons chegam para destruir a Terra e a população entra em desespero, o representante do Conselho de Planejamento do Hiperespaço Galáctico demonstra espanto:
 
-> "Esta supresa é injustificável. Todos os planos do projeto, bem como a ordem de demolição, estão em exposição no seu departamento local de planejamento, em Alfa do Centauro, há 50 dos seus anos terrestres, e portanto todos vocês tiveram muito tempo para apresentar qualquer reclamação formal, e agora é tarde demais para criar caso." (ADAMS, 1979)
+> "Esta supresa é injustificável. Todos os planos do projeto, bem como a ordem de demolição, estão em exposição no seu departamento local de planejamento, em Alfa do Centauro, há 50 dos seus anos terrestres, e portanto todos vocês tiveram muito tempo para apresentar qualquer reclamação formal, e agora é tarde demais para criar caso." (ADAMS, 2009, p. 44)
 
 Assim como na ficção, documentações sobre ótimos recursos podem estar relativamente escondidas. Embora esta não seja responsável pela destruição de nosso único lar, acredita-se que irá, pelo menos, reduzir em alguns minutos a busca e instalação do Firefox em novas distribuições GNU/Linux.
+
+## Referências
+
+* [DistroWatch: Search for All Linux Distributions](https://distrowatch.com/search.php?status=All&ostype=Linux)
+* [Mozilla Release Engineering](https://ftp.mozilla.org/pub/firefox/releases/latest/README.txt)
+* [man.he.net: wget](http://man.he.net/?topic=wget&section=all)
+* [man.he.net: tar](http://man.he.net/?topic=tar&section=all)
+* ADAMS, D. _Guia do Mochileiro das Galáxias, O_. Tradução por: DA COSTA, C. I., BRITTO, P. F. H. Rio de Janeiro: Sextante (2009).
+
+## Veja Mais
+
+* [Wikipedia: List of Linux Distributions](https://en.wikipedia.org/wiki/List_of_Linux_distributions)
