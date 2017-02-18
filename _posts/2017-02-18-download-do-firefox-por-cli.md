@@ -53,3 +53,13 @@ wget -O- --quiet \
     'https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=en-US' \
     | tar xvjf -
 ```
+
+## Finalização
+
+Existem documentações que estão amplamente disponíveis, com fácil acesso, e existem aquelas satirizadas por Douglas Adams em seu maravilhoso livro, _O Guia do Mochileiro das Galáxias_.
+
+Quando os Vogons chegam para destruir a Terra e a população entra em desespero, o representante do Conselho de Planejamento do Hiperespaço Galáctico demonstra espanto:
+
+> "Esta supresa é injustificável. Todos os planos do projeto, bem como a ordem de demolição, estão em exposição no seu departamento local de planejamento, em Alfa do Centauro, há 50 dos seus anos terrestres, e portanto todos vocês tiveram muito tempo para apresentar qualquer reclamação formal, e agora é tarde demais para criar caso." (ADAMS, 1979)
+
+Assim como na ficção, documentações sobre ótimos recursos podem estar relativamente escondidas. Embora esta não seja responsável pela destruição de nosso único lar, acredita-se que irá, pelo menos, reduzir em alguns minutos a busca e instalação do Firefox em novas distribuições GNU/Linux.
