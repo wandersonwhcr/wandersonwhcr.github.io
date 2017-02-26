@@ -33,7 +33,7 @@ theme_settings:
     post_navigation: false
 
 paginate: 5
-paginate_path: "blog/page:num"
+paginate_path: "/blog/page-:num/"
 
 markdown: kramdown
 highlighter: rouge
