@@ -211,3 +211,9 @@ var_dump($element->getAdapter());
 NULL
 */
 ```
+
+## Conclusão
+
+A disponibilização da versão 7 do PHP traz mudanças importantes para os desenvolvedores que usufruem da linguagem. A própria inclusão da [declaração de tipos básicos]({{ site.baseurl }}{% post_url 2017-02-11-php-7-e-declaracao-de-tipos %}) significa um grande avanço com relação à tipagem.
+
+Com a inclusão dos tipos anuláveis na linguagem, os códigos-fonte tendem a reduzir o tamanho e aumentar a confiabilidade. Todavia, a legibilidade do caractere `?` pode apresentar problemas, pois, o autor deste texto desconhece outra linguagem de programação que utiliza a mesma estrutura.
