@@ -68,6 +68,8 @@ A figura abaixo apresenta a captura parcial do Gitk com a linha do tempo para to
 
 {% include image.html src="/assets/img/2017-02-25-screenshot-3.png" description="Fonte: Elaborado pelo Autor" alt="Exemplo de Linha do Tempo com Padrões" %}
 
+O próximo artigo desta sequência tratará da integração de _branches_ na linha do tempo original, através do comando _merge_, fazendo com que o repositório de exemplo se torne parecido com a primeira figura deste artigo.
+
 ## Referências
 
 * SINK, E. _Version Control by Example_. Pyrenean Gold Press (2011).
