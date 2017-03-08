@@ -40,7 +40,9 @@ $ git add EXAMPLE && git commit -m'Inicializa o repositório'
 $ git branch develop master
 ```
 
-Após, o código abaixo cria três novos _branches_ a partir do nó apontado pelo _branch_ `master`, adicionando um conteúdo qualquer ao arquivo vazio.
+## Branches
+
+Após a criação dos nós primários, o código abaixo cria três novos _branches_ a partir do nó apontado pelo _branch_ `master`, adicionando um conteúdo qualquer ao arquivo vazio.
 
 ```bash
 $ git checkout master -b issue-1
