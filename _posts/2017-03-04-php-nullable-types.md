@@ -147,3 +147,67 @@ Stack trace:
   thrown in [...][...] on line 38
 */
 ```
+
+## Aplicando Nullable Types
+
+Com a utilização dos _nullable types_ (tipos anuláveis, em tradução livre) disponíveis no PHP 7.1, adiciona-se o caractere `?` antes do tipo explícido, informando à linguagem de programação que o valor passado pode ser aquele específico ou `null`. O exemplo abaixo apresenta a classe `Foo\Bar` com sua estrutura modificada, usufruindo dos tipos anuláveis.
+
+```php
+<?php
+
+namespace Foo;
+
+/**
+ * Classe de Exemplo
+ */
+class Bar
+{
+    /**
+     * Adaptador
+     * @type AdapterInterface|null
+     */
+    protected $adapter;
+
+    /**
+     * Configura o Adaptador
+     *
+     * @param  $adapter AdapterInterface|null Valor para Configuração
+     * @return self     Próprio Objeto para Encadeamento
+     */
+    public function setAdapter(?AdapterInterface $adapter) : self
+    {
+        // Configuração
+        $this->adapter = $adapter;
+        // Encadeamento
+        return $this;
+    }
+
+    /**
+     * Apresenta o Adaptador
+     *
+     * @return AdapterInterface|null Valor Configurado
+     */
+    public function getAdapter() : ?AdapterInterface
+    {
+        // Apresentação
+        return $this->adapter;
+    }
+}
+```
+
+Os tipos anuláveis, contrariando o valor padrão apresentado anteriormente no primeiro caso, obrigam que seja informado o valor do parâmetro definido no método, mesmo que este seja `null`. Ainda, o método de acesso ao encapsulamento não apresentará erros, pois há a informação de que o seu retorno pode ser `null`.
+
+```php
+<?php
+
+// Construção
+$element = new Foo\Bar();
+// Desconfigura Adaptador
+$element->setAdapter(null);
+
+var_dump($element->getAdapter());
+
+/*
+NULL
+*/
+```
