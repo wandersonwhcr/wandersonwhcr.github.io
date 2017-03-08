@@ -1,0 +1,21 @@
+$box-shadow: 1px 1px 5px #999999;
+$padding:    20px;
+
+figure.image {
+
+    & {
+        border: solid 1px #CCC;
+        -moz-box-shadow: $box-shadow;
+        -webkit-box-shadow: $box-shadow;
+        box-shadow: $box-shadow;
+    }
+
+    img {
+        padding: $padding;
+    }
+
+    figcaption {
+        text-align: center;
+        padding-bottom: $padding;
+    }
+}
