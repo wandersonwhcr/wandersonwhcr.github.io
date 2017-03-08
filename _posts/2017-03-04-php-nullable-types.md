@@ -54,7 +54,7 @@ class Bar
 }
 ```
 
-No caso anterior, após a configuração do adaptador com um objeto do tipo `Foo\AdapterInterface`, através do método `Foo\Bar::setAdapter`, não há a possibilidade de desconfiguração do atributo, fazendo com que o mesmo volte ao estado em tempo de construção. Para isto, pode-se adicionar um valor padrão `null` ao parâmetro `$adapter` do método em questão.
+No caso anterior, após a configuração do adaptador com um objeto do tipo `Foo\AdapterInterface`, através do método `Foo\Bar::setAdapter`, não há a possibilidade de desconfiguração do atributo, podendo fazer com que o mesmo volte ao estado em tempo de construção. Para isto, pode-se adicionar um valor padrão `null` ao parâmetro `$adapter` do método em questão.
 
 ```php
 <?php
@@ -88,7 +88,7 @@ Ou, ainda, adicionar um novo método, responsável pela desconfiguração do atr
     // ...
 ```
 
-Ambos os casos possuem problemas de estrutura. O primeiro caso define que existe um valor padrão que, se ignorado durante a utilização do método, deve ser utilizado. Todavia, a chamada do método se torna pouco compreensível quando sem parâmetros, sendo que encapsulamentos do tipo `set` possuem a lógica de recebimento de parâmetros.
+Ambos os casos possuem problemas de capacidade de escrita. O primeiro caso define que existe um valor padrão que, se ignorado durante a utilização do método, deve ser utilizado. Todavia, a chamada do método se torna pouco compreensível quando sem parâmetros, sendo que encapsulamentos do tipo `set` possuem a lógica de recebimento de valores em seus parâmetros.
 
 ```php
 <?php
@@ -128,7 +128,7 @@ object(Foo\Bar)#1 (1) {
 */
 ```
 
-Por fim, caso o adaptador não esteja configurado, o acesso ao método `Foo\Bar::getAdapter` apresenta um problema, pois o retorno foi configurado com tipo explícito.
+Por fim, caso o adaptador não esteja configurado, o acesso ao método `Foo\Bar::getAdapter` apresenta um erro, pois o retorno foi configurado com tipo explícito.
 
 ```php
 <?php
@@ -195,7 +195,7 @@ class Bar
 }
 ```
 
-Os tipos anuláveis, contrariando o valor padrão apresentado anteriormente no primeiro caso, obrigam que seja informado o valor do parâmetro definido no método, mesmo que este seja `null`. Ainda, o método de acesso ao encapsulamento não apresentará erros, pois há a informação de que o seu retorno pode ser `null`.
+Os tipos anuláveis, contrariando o valor padrão apresentado anteriormente no primeiro caso, obrigam que seja informado o valor do parâmetro definido no método, mesmo que este seja `null`. Ainda, o método de acesso ao encapsulamento não apresentará erros, pois há a informação de que o seu retorno pode ser nula.
 
 ```php
 <?php
