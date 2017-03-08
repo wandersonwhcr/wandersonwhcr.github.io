@@ -1,9 +1,6 @@
 baseurl: ""
 url: "https://wandersonwhcr.github.io"
 
-host: 0.0.0.0
-port: 8000
-
 theme_settings:
     title: Wanderson Camargo
     gravatar: e909effb189b69d2363d035ae7b4240d
