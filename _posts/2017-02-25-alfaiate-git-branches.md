@@ -75,3 +75,9 @@ O próximo artigo desta sequência tratará da integração de _branches_ na lin
 * SINK, E. _Version Control by Example_. Pyrenean Gold Press (2011).
 * GIT. _About Git_. Disponível em: [https://git-scm.com/about](https://git-scm.com/about). Acesso em: 25 de fev. de 2017.
 * CHACON, S.; STRAUB, B. _Pro Git_. Apress (2014).
+
+## Veja Mais
+
+* [Git Book: The entire Pro Git Book by Scott Chacon and Ben Straub](https://git-scm.com/book/en/v2)
+* [Atlassian: Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow)
+* [Stop using git pull: A better workflow](https://adamcod.es/2014/12/10/git-pull-correct-workflow.html) by [Adam Brett](https://adamcod.es)
