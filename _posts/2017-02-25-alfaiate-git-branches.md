@@ -40,6 +40,14 @@ $ git add EXAMPLE && git commit -m'Inicializa o repositório'
 $ git branch develop master
 ```
 
+## Nós Secundários
+
+A padronização de nomenclatura de nós secundários deve ser efetuada para possibilitar a fácil compreensão de futuras integrações de _branches_ na linha do tempo base.
+
+Por exemplo, esta página utiliza o GitHub como serviço de repositório Git. Para cada artigo necessário, adiciona-se uma nova _issue_ e, após, um novo _branch_ com o número da _issue_. Assim, posteriormente, sabe-se por qual necessidade criou-se um novo _branch_ e quando ele foi integrado na linha do tempo principal.
+
+Assim, tem-se como padrão de nomenclatura de _branches_ secundários a expressão regular `/^issue-[1-9][0-9]*$/`, onde todos os _branches_ possuem o prefixo `issue-` e o número da _issue_ como sufixo. Os nomes `issue-1`, `issue-22` e `issue-314` são exemplos que casam com essa expressão regular.
+
 ## Branches
 
 Após a criação dos nós primários, o código abaixo cria três novos _branches_ a partir do nó apontado pelo _branch_ `master`, adicionando um conteúdo qualquer ao arquivo vazio.
