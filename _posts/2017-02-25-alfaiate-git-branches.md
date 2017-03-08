@@ -13,6 +13,10 @@ Um sistema de controle de versões é um _software_ habilita um time de desenvol
 
 {% include image.html src="/assets/img/2017-02-25-screenshot.png" description="Fonte: Elaborado pelo Autor" alt="Exemplo de Linha do Tempo" %}
 
+A imagem anterior apresenta uma captura de tela parcial do Gitk, exibindo a linha do tempo entre as versões `1.4.0` e `1.4.1` do [repositório desta página](https://github.com/wandersonwhcr/wandersonwhcr.github.io). Nota-se que, para cada alteração efetuada, existe um nó na linha do tempo.
+
+Assim como um alfaiate, esta linha pode ser "costurada", onde cada nó é cosido de forma organizada, propondo-se obter o melhor produto final.
+
 ## Referências
 
 * SINK, E. _Version Control by Example_. Pyrenean Gold Press (2011).

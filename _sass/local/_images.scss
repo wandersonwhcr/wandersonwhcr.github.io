@@ -1,5 +1,6 @@
 $box-shadow: 1px 1px 5px #999999;
 $padding:    20px;
+$margin:     1em;
 
 figure.image {
 
@@ -9,6 +10,7 @@ figure.image {
         -webkit-box-shadow: $box-shadow;
         box-shadow: $box-shadow;
         display: inline-block;
+        margin-bottom: $margin;
     }
 
     img {
