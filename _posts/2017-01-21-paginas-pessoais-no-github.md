@@ -17,7 +17,7 @@ Nesta semana, após querer voltar a escrever, lembrei que o GitHub possibilita q
 
 ## Criando um Repositório
 
-O [GitHub](https://github.com) possibilita que seus usuários criem dois tipos de páginas: pessoais ou de organaização e páginas de projetos. Vamos utilizar o primeiro tipo, sem relacionamento com projetos. Por exemplo, o usuário `wandersonwhcr` pode criar uma página estática acessível através do endereço `https://wandersonwhcr.github.io`. Note que o GitHub já disponibiliza as páginas através do protocolo HTTPS por padrão.
+O [GitHub](https://github.com) possibilita que seus usuários criem dois tipos de páginas: pessoais ou de organização e páginas de projetos. Vamos utilizar o primeiro tipo, sem relacionamento com projetos. Por exemplo, o usuário `wandersonwhcr` pode criar uma página estática acessível através do endereço `https://wandersonwhcr.github.io`. Note que o GitHub já disponibiliza as páginas através do protocolo HTTPS por padrão.
 
 Primeiramente, temos que criar um repositório com o mesmo nome do subdomíno a ser utilizado. No caso acima, o nome do repositório ficará `wandersonwhcr.github.io`. Assim, [crie um novo repositório](https://github.com/new) com o seu domínio. No meu caso, o repositório com o código-fonte desta página está disponível no endereço abaixo.
 
