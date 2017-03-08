@@ -8,6 +8,7 @@ figure.image {
         -moz-box-shadow: $box-shadow;
         -webkit-box-shadow: $box-shadow;
         box-shadow: $box-shadow;
+        display: inline-block;
     }
 
     img {
@@ -16,6 +17,6 @@ figure.image {
 
     figcaption {
         text-align: center;
-        padding-bottom: $padding;
+        padding: 0 $padding $padding $padding;
     }
 }
