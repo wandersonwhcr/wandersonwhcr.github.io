@@ -2,23 +2,32 @@ $box-shadow: 1px 1px 5px #999999;
 $padding:    20px;
 $margin:     1em;
 
-figure.image {
+.image-container {
 
     & {
-        border: solid 1px #CCC;
-        -moz-box-shadow: $box-shadow;
-        -webkit-box-shadow: $box-shadow;
-        box-shadow: $box-shadow;
-        display: inline-block;
-        margin-bottom: $margin;
-    }
-
-    img {
-        padding: $padding;
-    }
-
-    figcaption {
         text-align: center;
-        padding: 0 $padding $padding $padding;
     }
+
+    figure {
+
+        & {
+            border: solid 1px #CCC;
+            -moz-box-shadow: $box-shadow;
+            -webkit-box-shadow: $box-shadow;
+            box-shadow: $box-shadow;
+            display: inline-block;
+            margin-bottom: $margin;
+        }
+
+        img {
+            padding: $padding;
+        }
+
+        figcaption {
+            text-align: center;
+            padding: 0 $padding $padding $padding;
+        }
+
+    }
+
 }
