@@ -38,7 +38,7 @@ Observa-se o avanço na linha do tempo do _branch_ `develop`, onde este recebe a
 
 ## Costura Impecável
 
-As linhas de nós secundários foram, portanto, cosidas na linha do tempo de desenvolvimento. Dessa maneira, sabe-se quais os _branches_ foram costurados na linha de desenvolvimento, devido à nomenclatura de _branches_ com números de _issues_ e à mensagem padrão adicionada pelo Git durante o _merge_.
+As linhas de nós secundários foram, portanto, cosidas na linha do tempo de desenvolvimento. Dessa maneira, sabe-se quais os _branches_ foram costurados em determinada linha, devido à nomenclatura de _branches_ com números de _issues_ e à mensagem padrão adicionada pelo Git durante o _merge_.
 
 Todos os _branches_ saem do mesmo ponto e entram sequencialmente no _branch_ `develop`. O _branch_ `master` não deve ser utilizado diretamente, pois representa a versão estável do sistema, sendo sincronizado com o _branch_ `develop` somente durante a publicação de novas versões.
 
