@@ -13,7 +13,7 @@ Assim como o código-fonte, a estrutura do versionamento de _software_ necessita
 
 Um sistema de controle de versões é um _software_ que habilita um time de desenvolvedores de _software_ a trabalharem em grupo, armazenando a história de seu trabalho (SINK, 2011). A história deste trabalho é representada como uma sequência de passos, descrevendo, basicamente, como o código-fonte do _software_ foi modificado em determinado período, caracterizando, assim, uma linha do tempo.
 
-{% include image.html src="/assets/img/2017-02-25-screenshot-1.png" description="Fonte: Elaborado pelo Autor" alt="Exemplo de Linha do Tempo" %}
+{% include figure.html src="/assets/img/2017-02-25-screenshot-1.png" description="Fonte: Elaborado pelo Autor" alt="Exemplo de Linha do Tempo" %}
 
 A imagem anterior apresenta uma captura de tela parcial do Gitk, exibindo a linha do tempo entre as versões `1.4.0` e `1.4.1` do [repositório desta página](https://github.com/wandersonwhcr/wandersonwhcr.github.io). Nota-se que, para cada alteração efetuada, existe um nó na linha do tempo.
 
@@ -25,7 +25,7 @@ O principal recurso que diferencia o Git de outros sistemas de controle de vers�
 
 Um _branch_ pode ser criado em qualquer ponto da linha do tempo e referencia um nó. Porém, quando os _branches_ são criados sem a padronização de nós base, pode-se confundir o leitor durante a análise da linha do tempo.
 
-{% include image.html src="/assets/img/2017-02-25-screenshot-2.png" description="Fonte: Elaborado pelo Autor" alt="Exemplo de Linha do Tempo" %}
+{% include figure.html src="/assets/img/2017-02-25-screenshot-2.png" description="Fonte: Elaborado pelo Autor" alt="Exemplo de Linha do Tempo" %}
 
 A figura anterior demonstra uma captura de tela parcial do Gitk para o [repositório oficial do Zend DB](https://github.com/zendframework/zend-db). Sabe-se que o Git possui uma ótima resolução de integração de afastamento de linhas, porém a leitura deste repositório em busca de informações, torna-se complicada quando não há padronização de um nó raiz durante a criação de _branches_.
 
@@ -76,7 +76,7 @@ $ git add EXAMPLE && git commit -m'Fecha documento'
 
 A figura abaixo apresenta a captura parcial do Gitk com a linha do tempo para todos os _branches_ criados. Nota-se que todos os _branches_ possuem o mesmo nó base e a leitura da linha do tempo de cada _branch_ pode ser analisada com maior facilidade.
 
-{% include image.html src="/assets/img/2017-02-25-screenshot-3.png" description="Fonte: Elaborado pelo Autor" alt="Exemplo de Linha do Tempo com Padrões" %}
+{% include figure.html src="/assets/img/2017-02-25-screenshot-3.png" description="Fonte: Elaborado pelo Autor" alt="Exemplo de Linha do Tempo com Padrões" %}
 
 O próximo artigo desta sequência tratará da [integração de _branches_]({{ site.baseurl }}{% post_url 2017-03-11-alfaiate-git-merges %}) na linha do tempo original através do comando _merge_, fazendo com que o repositório de exemplo se torne semelhante ao apresentado na primeira figura deste artigo.
 

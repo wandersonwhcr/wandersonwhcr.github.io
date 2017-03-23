@@ -15,7 +15,7 @@ Swicegood (2008) define _merge_ como capturar dois ou mais _branches_ e combinar
 
 Basicamente, a reintegração de uma história divergente à linha de tempo principal é efetuada através de um _merge_, onde o nó final desta deve ser cosido de forma que a linha permaneça coerente.
 
-{% include image.html src="/assets/img/2017-02-25-screenshot-3.png" description="Fonte: Elaborado pelo Autor" alt="Exemplo de Linha do Tempo com Padrões" %}
+{% include figure.html src="/assets/img/2017-02-25-screenshot-3.png" description="Fonte: Elaborado pelo Autor" alt="Exemplo de Linha do Tempo com Padrões" %}
 
 A figura acima apresenta a [estrutura de exemplo]({{ site.baseurl }}{% post_url 2017-02-25-alfaiate-git-branches %}) criada no artigo anterior, possuindo três _branches_ que devem ser reintegrados: `issue-1`, `issue-2` e `issue-3`. Nota-se, ainda, que todos os _branches_ possuem o mesmo nó base, apontado pelo _branch_ `master`.
 
@@ -32,7 +32,7 @@ $ git merge --no-ff issue-2
 
 O parâmetro `--no-ff` (_no fast forward_, sem avanço rápido, em tradução livre), é utilizado para criar um nó adicional na linha do tempo, facilitando buscas posteriores para o ponto exato onde determinado _branch_ foi reintegrado, informando, assim, que naquele ponto, aplicou-se um _merge_.
 
-{% include image.html src="/assets/img/2017-03-11-screenshot.png" description="Fonte: Elaborado pelo Autor" alt="Reintegração de Histórias Divergentes" %}
+{% include figure.html src="/assets/img/2017-03-11-screenshot.png" description="Fonte: Elaborado pelo Autor" alt="Reintegração de Histórias Divergentes" %}
 
 Observa-se o avanço na linha do tempo do _branch_ `develop`, onde este recebe as alterações pertinentas aos _branches_ reintegrados. Ainda, cada _merge_ contém uma mensagem, adicionada automaticamente pelo Git, informando que o nó foi incluído a partir de um _merge_ de determinado _branch_.
 
