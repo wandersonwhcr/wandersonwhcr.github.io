@@ -60,3 +60,8 @@ O próximo artigo explicará como sincronizar o _branch_ principal `master` com 
 
 * SWICEGOOD, T. _Pragmatic Version Control Using Git_. Pragmatic Bookshelf (2008).
 * SINK, E. _Version Control by Example_. Pyrenean Gold Press (2011).
+
+## Veja Mais
+
+* [Atlassian: Git Merge](https://www.atlassian.com/git/tutorials/git-merge)
+* [Codexico: Tutorial Simples Parte 2 Git Branch e Merge](http://codexico.com.br/blog/linux/tutorial-simples-parte-2-git-branch-e-merge/)
