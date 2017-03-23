@@ -17,7 +17,7 @@ Basicamente, a reintegração de uma história divergente à linha de tempo prin
 
 {% include image.html src="/assets/img/2017-02-25-screenshot-3.png" description="Fonte: Elaborado pelo Autor" alt="Exemplo de Linha do Tempo com Padrões" %}
 
-A figura acima apresenta a estrutura de exemplo criada no artigo anterior, possuindo três _branches_ que devem ser reintegrados: `issue-1`, `issue-2` e `issue-3`. Nota-se, ainda, que todos os _branches_ possuem o mesmo nó base, apontado pelo _branch_ `master`.
+A figura acima apresenta a [estrutura de exemplo]({{ site.baseurl }}{% post_url 2017-02-25-alfaiate-git-branches %}) criada no artigo anterior, possuindo três _branches_ que devem ser reintegrados: `issue-1`, `issue-2` e `issue-3`. Nota-se, ainda, que todos os _branches_ possuem o mesmo nó base, apontado pelo _branch_ `master`.
 
 ## Reintegrando Nós
 
