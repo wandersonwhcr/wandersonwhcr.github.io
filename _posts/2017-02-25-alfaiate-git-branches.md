@@ -7,6 +7,8 @@ category: Git
 
 Assim como o código-fonte, a estrutura do versionamento de _software_ necessita de cuidados, visando melhor compreensão e manutenção. O conteúdo aqui presente inicia uma sequência de artigos que dialogam sobre como tornar a linha de desenvolvimento do Git mais amigável, onde cada ponto dado na linha do tempo é valoroso.
 
+{% include index-alfaiate-git.md current=1 %}
+
 ## Linha do Tempo
 
 Um sistema de controle de versões é um _software_ que habilita um time de desenvolvedores de _software_ a trabalharem em grupo, armazenando a história de seu trabalho (SINK, 2011). A história deste trabalho é representada como uma sequência de passos, descrevendo, basicamente, como o código-fonte do _software_ foi modificado em determinado período, caracterizando, assim, uma linha do tempo.
