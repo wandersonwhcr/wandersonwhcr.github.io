@@ -11,7 +11,7 @@ Continuando a sequência de artigos sobre como tornar a linha de desenvolvimento
 
 ## Merges
 
-Swicegood (2008) define _merge_ como capturar dois ou mais _branches_ e combinar suas histórias numa só. Sink (2011) complementa que a convergência de _branches_ é feita através de _merge_, tornando a operação simples, automatizando-a.
+Swicegood (2008) define _merge_ como capturar dois ou mais _branches_ e combinar suas histórias numa só. Sink (2011) complementa que a convergência de _branches_ é feita através de _merges_, tornando a operação simples, automatizando-a.
 
 Basicamente, a reintegração de uma história divergente à linha de tempo principal é efetuada através de um _merge_, onde o nó final desta deve ser cosido de forma que a linha permaneça coerente.
 
