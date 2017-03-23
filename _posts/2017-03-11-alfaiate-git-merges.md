@@ -34,7 +34,7 @@ O parâmetro `--no-ff` (_no fast forward_, sem avanço rápido, em tradução li
 
 {% include figure.html src="/assets/img/2017-03-11-screenshot.png" description="Fonte: Elaborado pelo Autor" alt="Reintegração de Histórias Divergentes" %}
 
-Observa-se o avanço na linha do tempo do _branch_ `develop`, onde este recebe as alterações pertinentas aos _branches_ reintegrados. Ainda, cada _merge_ contém uma mensagem, adicionada automaticamente pelo Git, informando que o nó foi incluído a partir de um _merge_ de determinado _branch_.
+Observa-se o avanço na linha do tempo do _branch_ `develop`, onde este recebe as alterações pertinentes aos _branches_ reintegrados. Ainda, cada _merge_ contém uma mensagem, adicionada automaticamente pelo Git, informando que o nó foi incluído a partir de um _merge_ de determinado _branch_.
 
 ## Costura Impecável
 
