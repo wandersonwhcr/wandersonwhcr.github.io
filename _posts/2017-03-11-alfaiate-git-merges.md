@@ -36,6 +36,26 @@ Observa-se o avanço na linha do tempo do _branch_ `develop`, onde este recebe a
 
 As linhas de nós secundários foram, portanto, cosidas novamente na linha do tempo de desenvolvimento. Dessa maneira, sabe-se quais os _branches_ foram costurados na linha principal, por causa da nomenclatura de _branches_ com números de _issues_ e pela mensagem padrão adicionada pelo Git durante o _merge_. Todos os _branches_ saem do mesmo ponto e entram sequencialmente no _branch_ `develop`.
 
+## Histórico
+
+O comando abaixo apresenta a ordem com que os nós foram criados e reintegrados no _branch_ `develop`, apresentando os nós adicionais sequencialmente.
+
+```bash
+$ git log --oneline
+0394c22 Merge branch 'issue-2' into develop
+8a5798f Merge branch 'issue-1' into develop
+c3ba031 Merge branch 'issue-3' into develop
+86175fc Fecha documento
+3eb7c60 Adiciona conteúdo de teste
+3c90a79 Começa um novo documento
+d10490d Inclui novos conteúdos
+7794b88 Adiciona a primeira linha
+c287efc Adiciona conteúdo de exemplo
+bdf5275 Inicializa o repositório
+```
+
+O próximo artigo explicará como sincronizar o _branch_ principal `master` com o _branch_ de desenvolvimento `develop`, criando uma nova versão no repositório através de _tags_.
+
 ## Referências
 
 * SWICEGOOD, T. _Pragmatic Version Control Using Git_. Pragmatic Bookshelf (2008).
