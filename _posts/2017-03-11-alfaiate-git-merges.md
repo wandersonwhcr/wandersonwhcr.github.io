@@ -5,13 +5,13 @@ date: 2017-03-11
 category: Git
 ---
 
-Continuando a sequência de artigos sobre como tornar a linha de desenvolvimento do Git mais amigável, este documento apresenta informações sobre como coser um nó final de _branch_ na linha do tempo principal, reintegrando-o.
+Continuando a sequência de artigos sobre como tornar a linha de desenvolvimento do Git mais amigável, este documento apresenta informações sobre como coser um nó final de _branch_ na linha do tempo de desenvolvimento, reintegrando-o.
 
 ## Merges
 
-Swicegood (2008) define _merge_ como capturar dois ou mais _branches_ e combinar suas histórias numa só. Sink (2011) complementa que convergência de _branches_ é feita através de _merge_, tornando a operação simples, automatizando-a.
+Swicegood (2008) define _merge_ como capturar dois ou mais _branches_ e combinar suas histórias numa só. Sink (2011) complementa que a convergência de _branches_ é feita através de _merge_, tornando a operação simples, automatizando-a.
 
-Basicamente, a reintegração de uma divergência à linha de tempo principal é efetuada através de um _merge_, onde o nó final desta deve ser cosido de forma que a linha permaneça coerente.
+Basicamente, a reintegração de uma história divergente à linha de tempo principal é efetuada através de um _merge_, onde o nó final desta deve ser cosido de forma que a linha permaneça coerente.
 
 {% include image.html src="/assets/img/2017-02-25-screenshot-3.png" description="Fonte: Elaborado pelo Autor" alt="Exemplo de Linha do Tempo com Padrões" %}
 
@@ -19,7 +19,7 @@ A figura acima apresenta a estrutura de exemplo criada no artigo anterior, possu
 
 ## Reintegrando Nós
 
-A partir da estrutura anterior, deve-se integrar os _branches_ `issue-3`, `issue-1` e `issue-2`, nesta ordem, exemplificando assim, a ação de _merges_ em _branches_ divergentes. Portanto, os seguintes comandos devem ser executados.
+A partir da estrutura anterior, deve-se integrar os _branches_ `issue-3`, `issue-1` e `issue-2`, nesta ordem, no _branch_ `develop`, exemplificando assim, a ação de _merges_ em _branches_ divergentes. Para tanto, os seguintes comandos devem ser executados.
 
 ```bash
 $ git checkout develop
@@ -28,13 +28,17 @@ $ git merge --no-ff issue-1
 $ git merge --no-ff issue-2
 ```
 
-O parâmetro `--no-ff` (_no fast forward_, sem avanço rápido, em tradução livre), é utilizado para facilitar a busca posterior sobre o ponto exato onde determinado _branch_ foi reintegrado, sendo responsável por criar um nó adicional na linha do tempo, informando que, naquele ponto, aplicou-se um _merge_.
+O parâmetro `--no-ff` (_no fast forward_, sem avanço rápido, em tradução livre), é utilizado para criar um nó adicional na linha do tempo, facilitando buscas posteriores para o ponto exato onde determinado _branch_ foi reintegrado, informando, assim, que naquele ponto, aplicou-se um _merge_.
 
 {% include image.html src="/assets/img/2017-03-11-screenshot.png" description="Fonte: Elaborado pelo Autor" alt="Reintegração de Histórias Divergentes" %}
 
-Observa-se o avanço na linha do tempo do _branch_ `develop`, onde este recebe as alterações pertinentas aos _branches_ reintegrados. Ainda, cada _merge_ contém uma mensagem, adicionada automaticamente pelo Git, informando que o nó foi incluído a partir de um _merge_ para determinado _branch_.
+Pode-se observar o avanço na linha do tempo do _branch_ `develop`, onde este recebe as alterações pertinentas aos _branches_ reintegrados. Ainda, cada _merge_ contém uma mensagem, adicionada automaticamente pelo Git, informando que o nó foi incluído a partir de um _merge_ de determinado _branch_.
 
-As linhas de nós secundários foram, portanto, cosidas novamente na linha do tempo de desenvolvimento. Dessa maneira, sabe-se quais os _branches_ foram costurados na linha principal, por causa da nomenclatura de _branches_ com números de _issues_ e pela mensagem padrão adicionada pelo Git durante o _merge_. Todos os _branches_ saem do mesmo ponto e entram sequencialmente no _branch_ `develop`.
+## Costura Impecável
+
+As linhas de nós secundários foram, portanto, cosidas novamente na linha do tempo de desenvolvimento. Dessa maneira, sabe-se quais os _branches_ foram costurados na linha de desenvolvimento, devido à nomenclatura de _branches_ com números de _issues_ e à mensagem padrão adicionada pelo Git durante o _merge_.
+
+Todos os _branches_ saem do mesmo ponto e entram sequencialmente no _branch_ `develop`. O _branch_ `master` não deve ser utilizado diretamente, pois representa a versão estável do sistema, sendo sincronizado com o _branch_ `develop` somente durante a publicação de novas versões.
 
 ## Histórico
 
