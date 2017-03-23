@@ -32,6 +32,10 @@ O parâmetro `--no-ff` (_no fast forward_, sem avanço rápido, em tradução li
 
 {% include image.html src="/assets/img/2017-03-11-screenshot.png" description="Fonte: Elaborado pelo Autor" alt="Reintegração de Histórias Divergentes" %}
 
+Observa-se o avanço na linha do tempo do _branch_ `develop`, onde este recebe as alterações pertinentas aos _branches_ reintegrados. Ainda, cada _merge_ contém uma mensagem, adicionada automaticamente pelo Git, informando que o nó foi incluído a partir de um _merge_ para determinado _branch_.
+
+As linhas de nós secundários foram, portanto, cosidas novamente na linha do tempo de desenvolvimento. Dessa maneira, sabe-se quais os _branches_ foram costurados na linha principal, por causa da nomenclatura de _branches_ com números de _issues_ e pela mensagem padrão adicionada pelo Git durante o _merge_. Todos os _branches_ saem do mesmo ponto e entram sequencialmente no _branch_ `develop`.
+
 ## Referências
 
 * SWICEGOOD, T. _Pragmatic Version Control Using Git_. Pragmatic Bookshelf (2008).
