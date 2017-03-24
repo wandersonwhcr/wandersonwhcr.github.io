@@ -5,7 +5,7 @@ date: 2017-03-18
 category: JavaScript
 ---
 
-O presente artigo apresenta uma breve introdução sobre JavaScript Promises (promessas, em tradução livre), estruturas que facilitam a execução assíncrona de elementos encadeados.
+O presente artigo apresenta uma (não tão) breve introdução sobre JavaScript Promises (promessas, em tradução livre), estruturas que facilitam a execução assíncrona de elementos encadeados. Inclui um caso de uso para consulta assíncrona de produtos com preços, apresentando um _feedback_ ao usuário durante a execução.
 
 ## Introdução
 
