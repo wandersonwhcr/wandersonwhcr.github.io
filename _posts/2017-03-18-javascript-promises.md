@@ -63,6 +63,83 @@ O exemplo anterior adiciona três _closures_ de execução. A primeira _closure_
 
 Constata-se que as _closures_ configuradas pelo método `then` são executadas posteriormente ao cálculo e caso algum erro seja apresentado, o tratamento pode ser aplicado no método `catch`. Ainda, caso uma destes fluxos de execução apresente uma exceção através de um `throw`, o método `catch` é invocado, recebendo como parâmetro a mensagem de erro.
 
+## Caso de Uso
+
+A criação de camadas de responsabilidade no código-fonte pode usufruir da estrutura de Promises através do padrão de projeto Repository. O exemplo abaixo apresenta uma camada de serviço responsável por apresentar uma lista de produtos com seus respectivos preços. Por sua vez, a camada de serviço acessa duas camadas de repositório, onde a primeira consulta os produtos filtrados, e a segunda os preços.
+
+```js
+/**
+ * Camada de Repositório de Produtos
+ */
+var ProductsRepository = function () {
+    /**
+     * Consulta de Produtos
+     *
+     * @param  object  params Parâmetros de Execução
+     * @return Promise Execução Assíncrona
+     */
+    this.fetch = function (params) {
+        // Execução Assíncrona
+        return new Promise(function (resolve, reject) {
+            // Consulta Servidor
+            var handler = $.get('/ws/products', params);
+
+            // Sucesso!
+            handler.done(function (data) {
+                // Dados Encontrados
+                // Exemplo de Estrutura:
+                // [
+                //     {"id": 1, "name": "Product A"},
+                //     {"id": 2, "name": "Product B"}
+                // ]
+                resolve(data);
+            });
+
+            // Erro Encontrado
+            handler.fail(function (error) {
+                // Apresentar Erro Encontrado
+                reject(error);
+            });
+        });
+    };
+};
+```
+
+```js
+/**
+ * Camada de Serviço de Produtos
+ */
+var ProductsService = function () {
+    /**
+     * Camada de Repositório de Produtos
+     * @type ProductsRepository
+     */
+    var productsRepository = new ProductsRepository();
+
+    /**
+     * Camada de Repositório de Preços de Produtos
+     * @type PricesRepository
+     */
+    var pricesRepository = new PricesRepository();
+
+    /**
+     * Consulta de Produtos e Preços
+     *
+     * @param  object  params Parâmetros de Execução
+     * @return Promise Execução Assíncrona
+     */
+    this.fetch = function (params) {
+        // Capturar Produtos
+        return productsRepository.fetch(params).then(function (products) {
+            // Capturar Preços de Produtos
+            return pricesRepository.fetch(params).then(function (prices) {
+                // Mapear Produtos e Preços
+            });
+        });
+    };
+};
+```
+
 ## Referências
 
 * MOZILLA. _Promise_. Disponível em [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global\_Objects/Promise](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise). Acesso em 18/03/2017.
