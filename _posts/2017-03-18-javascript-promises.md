@@ -118,6 +118,11 @@ var ProductsService = function () {
 
     /**
      * Camada de Repositório de Preços de Produtos
+     *
+     * Esta camada possui a mesma estrutura daquela utilizada no Repositório de
+     * Produtos, através de requisições AJAX por jQuery, porém captura
+     * informações do Web Service de preços.
+     *
      * @type PricesRepository
      */
     var pricesRepository = new PricesRepository();
@@ -131,9 +136,19 @@ var ProductsService = function () {
     this.fetch = function (params) {
         // Capturar Produtos
         return productsRepository.fetch(params).then(function (products) {
+            // Mapear Produtos
+            var dataset = products.reduce(function (dataset, datum) {
+                dataset[datum.id] = datum;
+                return dataset;
+            }, {});
             // Capturar Preços de Produtos
             return pricesRepository.fetch(params).then(function (prices) {
-                // Mapear Produtos e Preços
+                // Configurar Preços dos Produtos
+                prices.forEach(function (datum) {
+                    dataset[datum.id].price = datum.price;
+                });
+                // Apresentação
+                return dataset;
             });
         });
     };
