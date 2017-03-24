@@ -167,6 +167,14 @@ Após o mapeamento, define-se uma nova consulta, desta vez ao repositório de pr
 
 Para cada produto encontrado anteriormente, configura-se o seu preço. Por fim, a última _closure_ retorna um _array_ com todos os objetos configurados, sem o mapeamento de _hashes_, limpando a estrutura criada para facilitar a indexação.
 
+### Encadeamento de Promessas
+
+O exemplo anterior apresenta uma característica interessante de elementos do tipo `Promise`: para cada _closure_ informada pelo método `then`, o seu retorno será apresentado como parâmetro para o próximo `then`.
+
+Se uma _closure_ apresentar um tipo básico, como `number` ou `string`, este será diretamente informado como parâmetro na _closure_ do próximo `then` encadeado. Caso o retorno seja um outro objeto do tipo `Promise`, o próprio JavaScript efetuará sua execução, de forma assíncrona, seguindo o fluxo de processamento.
+
+Portanto, verifica-se que o retorno de uma _closure_ informada nos métodos `then` é importante, pois possibilita o encadeamento com reutilização dos resultados encontrados nas execuções assíncronas. Caso uma _closure_ não informe um retorno, a próxima _closure_ encadeada através do método `then` receberá como parâmetro um valor `undefined`.
+
 ## Referências
 
 * MOZILLA. _Promise_. Disponível em [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global\_Objects/Promise](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise). Acesso em 18/03/2017.
