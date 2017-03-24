@@ -61,6 +61,8 @@ calcSomethingPromise
 
 O exemplo anterior adiciona três _closures_ de execução. A primeira _closure_ configurada com o método `then`, recebe como parâmetro o resultado de contabilização informado em `resolve`, interno à estrutura da Promise. Já a segunda _closure_ do método `then`, recebe como parâmetro o resultado da primeira, apresentando no _console_ o elemento construído anteriormente. Por fim, a terceira _closure_ pelo método `catch`, contém o tratamento de erro caso `reject` seja executado.
 
+Constata-se que as _closures_ configuradas pelo método `then` são executadas posteriormente ao cálculo e caso algum erro seja apresentado, o tratamento pode ser aplicado no método `catch`. Ainda, caso uma destes fluxos de execução apresente uma exceção através de um `throw`, o método `catch` é invocado, recebendo como parâmetro a mensagem de erro.
+
 ## Referências
 
 * MOZILLA. _Promise_. Disponível em [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global\_Objects/Promise](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise). Acesso em 18/03/2017.
