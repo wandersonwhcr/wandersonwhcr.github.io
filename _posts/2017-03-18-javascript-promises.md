@@ -147,13 +147,25 @@ var ProductsService = function () {
                 prices.forEach(function (datum) {
                     dataset[datum.id].price = datum.price;
                 });
-                // Apresentação
-                return dataset;
+                // Remover Mapeamento
+                return Object.keys(dataset).map(function (id) {
+                    return dataset[id];
+                });
             });
         });
     };
 };
 ```
+
+O método `ProductsService::fetch` acessa duas camadas de repositório, `ProductsRepository` e `PricesRepository`, capturando primeiramente os produtos e, após, os preços destes produtos, através de seus métodos `fetch`. Ambos os métodos das camadas de repositório retornam objetos do tipo `Promise` e são, portanto, assíncronos.
+
+Ainda, o método `ProductsService::fetch` retorna um objeto do tipo `Promise`, tendo em vista que há o retorno do resultado do método `Promise::then`. Os métodos `then` e `catch` de objetos do tipo `Promise` retornam outras Promises, trabalhando como _fluent interfaces_ e possibilitando encadeamento.
+
+Quando a Promise retornada pelo método `ProductsRepository::fetch` finalizar a sua execução através da _closure_ `resolve`, o método `then` receberá como parâmetro os produtos encontrados na camada de repositório. No exemplo acima, há um mapeamento dos produtos apresentados, criando uma estrutura de `HashMap`, facilitando a captura posterior dos objetos encontrados.
+
+Após o mapeamento, define-se uma nova consulta, desta vez ao repositório de preços, através do método `PricesRepository::fetch`. Este método retorna um novo objeto do tipo `Promise`; o método `then` é invocado e a _closure_ passada recebe como parâmetro um conjunto de preços de produtos encontrados no Web Service.
+
+Para cada produto encontrado anteriormente, configura-se o seu preço. Por fim, a última _closure_ retorna um _array_ com todos os objetos configurados, sem o mapeamento de _hashes_, limpando a estrutura criada para facilitar a indexação.
 
 ## Referências
 
