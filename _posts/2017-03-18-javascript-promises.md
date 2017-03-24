@@ -175,6 +175,87 @@ Se uma _closure_ apresentar um tipo básico, como `number` ou `string`, este ser
 
 Portanto, verifica-se que o retorno de uma _closure_ informada nos métodos `then` é importante, pois possibilita o encadeamento com reutilização dos resultados encontrados nas execuções assíncronas. Caso uma _closure_ não informe um retorno, a próxima _closure_ encadeada através do método `then` receberá como parâmetro um valor `undefined`.
 
+### Camada de Controle
+
+O exemplo anterior define uma camada de serviço `ProductsService` que possui um método `fetch` responsável pela captura de produtos e seus preços. A forma com que estes dados são capturados não é apresentada pelo método, porém, sabe-se que este retorna um objeto do tipo `Promise`.
+
+Com base nestas informações, o próximo exemplo apresenta uma camada de controle que adiciona um evento ao botão de pesquisa, efetuando a consulta dos produtos com base em alguns filtros definidos.
+
+```js
+/**
+ * Camada de Controle de Produtos
+ */
+var ProductsController = function () {
+    /**
+     * Botão de Pesquisa
+     * @type jQuery.fn
+     */
+    var btnSearch = $('#btn-search');
+
+    /**
+     * Tipo de Produto
+     * @type jQuery.fn
+     */
+    var formType = $('#form-type');
+
+    /**
+     * Elemento de "Carregando"
+     * @type jQuery.fn
+     */
+    var elLoading = $('#el-loading');
+
+    /**
+     * Camada de Serviço de Produtos
+     * @type ProductsService
+     */
+    var productsService = new ProductsService();
+
+    /**
+     * Referência Interna
+     * @type ProductsController
+     */
+    var component = this;
+
+    /**
+     * Inicialização
+     */
+    (function () {
+        // Evento: Filtrar
+        btnSearch.on('click', function () {
+            // Inicialização
+            var params = {};
+            // Parâmetro: Tipo de Produto
+            params.type = formType.val();
+            // Exibir "Carregando"
+            elLoading.show();
+            // Consultar
+            productsService.fetch(params).then(function (products) {
+                // Renderização
+                component.render(products);
+                // Esconder "Carregando"
+                elLoading.hide();
+            }).catch(function (error) {
+                // Renderiza Nenhum Elemento
+                component.render([]);
+                // Esconder "Carregando"
+                elLoading.hide();
+            });
+        });
+    })();
+
+    /**
+     * Renderiza Elementos
+     *
+     * @param  Array products Elementos para Renderização
+     * @return self  Próprio Objeto para Encadeamento
+     */
+    this.render = function (products) {
+        // TODO Renderizar Elementos
+        return this;
+    };
+};
+```
+
 ## Referências
 
 * MOZILLA. _Promise_. Disponível em [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global\_Objects/Promise](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise). Acesso em 18/03/2017.
