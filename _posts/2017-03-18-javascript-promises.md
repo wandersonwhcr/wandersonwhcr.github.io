@@ -254,6 +254,8 @@ Observa-se que a utilização de objetos da classe `Promise` melhora a construç
 
 Nota-se, também, que o encapsulamento de funcionalidades que dependem de execuções assíncronas, como consultas a banco de dados ou Web Services, tornam-se transparentes: a programação de recursos que possuem dependências destas funções são praticamente definidas no formato síncrono, deixando a cargo da linguagem de programação o tratamento do paralelismo.
 
+Posteriores estudos deverão apresentar como efetuar tratamento de erros com objetos do tipo `Promise`, através do método `catch`. Também há possibilidade da criação de um documento que descreve a utilização do banco de dados PouchDB, onde sua API homônima é totalmente definida com Promises.
+
 ## Referências
 
 * MOZILLA. _Promise_. Disponível em [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global\_Objects/Promise](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise). Acesso em 18/03/2017.
