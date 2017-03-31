@@ -9,7 +9,7 @@ O presente artigo apresenta uma (não tão) breve introdução sobre JavaScript 
 
 ## Introdução
 
-Uma `Promise` é um objeto que manipula valores de forma assíncrona e que não são necessariamente reconhecidos no momento de sua criação (MOZILLA 2017). Basicamente, uma `Promise` representa um bloco de código que pode não finalizar a sua execução no momento em que é executado, sendo paralelizado no momento de sua criação, evitando, assim, o bloqueio do fluxo de execução principal.
+Uma `Promise` é um objeto que manipula valores de forma assíncrona e que não são necessariamente reconhecidos no momento de sua criação (MOZILLA 2017). Basicamente, uma `Promise` representa um bloco de código que pode não finalizar a sua execução no momento em que é criado, sendo paralelizado prontamente, evitando, assim, o bloqueio do fluxo de execução principal.
 
 O exemplo abaixo apresenta a execução assíncrona de um cálculo qualquer, através de Promises.
 
@@ -34,7 +34,7 @@ Nota-se que um objeto do tipo `Promise` foi inicializado através de seu constru
 
 ## Execução
 
-Quando uma `Promise` é construída, ela automaticamente inicia a sua execução de forma assíncrona. Uma Promise pode estar em três estados distintos, dependendo da sua execução atual.
+Quando uma `Promise` é construída, ela automaticamente inicia a sua execução de forma assíncrona. Uma Promise pode estar em três estados distintos, dependendo da sua execução atual:
 
 * _pending_ (pendente): onde esta ainda não foi resolvida ou rejeitada;
 * _fullfilled_ (realizada): a execução foi finalizada com sucesso através da _closure_ `resolve`;
@@ -59,9 +59,9 @@ calcSomethingPromise
     });
 ```
 
-O exemplo anterior adiciona três _closures_ de execução. A primeira _closure_ configurada com o método `then`, recebe como parâmetro o resultado de contabilização informado em `resolve`, interno à estrutura da Promise. Já a segunda _closure_ do método `then`, recebe como parâmetro o resultado da primeira, apresentando no _console_ o elemento construído anteriormente. Por fim, a terceira _closure_ pelo método `catch`, contém o tratamento de erro caso `reject` seja executado.
+O exemplo anterior adiciona três _closures_ de execução. A primeira _closure_ configurada com o método `then`, recebe como parâmetro o resultado de contabilização informado em `resolve`, interno à estrutura da Promise. Já a segunda _closure_ do método `then`, recebe como parâmetro o resultado da primeira, um objeto com o atributo `total`, apresentando no _console_ o elemento construído anteriormente. Por fim, a terceira _closure_ pelo método `catch`, contém o tratamento de erro caso `reject` seja executado.
 
-Constata-se que as _closures_ configuradas pelo método `then` são executadas posteriormente ao cálculo e caso algum erro seja apresentado, o tratamento pode ser aplicado no método `catch`. Ainda, caso uma destes fluxos de execução apresente uma exceção através de um `throw`, o método `catch` é invocado, recebendo como parâmetro a mensagem de erro.
+Constata-se que as _closures_ configuradas pelo método `then` são executadas posteriormente ao cálculo e caso algum erro seja apresentado, o tratamento pode ser aplicado no método `catch`. Ainda, caso um destes fluxos de execução apresente uma exceção através de um `throw`, o método `catch` é invocado, recebendo como parâmetro a mensagem de erro.
 
 ## Caso de Uso
 
@@ -120,8 +120,8 @@ var ProductsService = function () {
      * Camada de Repositório de Preços de Produtos
      *
      * Esta camada possui a mesma estrutura daquela utilizada no Repositório de
-     * Produtos, através de requisições AJAX por jQuery, porém captura
-     * informações do Web Service de preços.
+     * Produtos, usufruindo de requisições AJAX por jQuery. Porém, captura
+     * informações do Web Service de preços ao invés de produtos.
      *
      * @type PricesRepository
      */
@@ -161,11 +161,11 @@ O método `ProductsService::fetch` acessa duas camadas de repositório, `Product
 
 Ainda, o método `ProductsService::fetch` retorna um objeto do tipo `Promise`, tendo em vista que há o retorno do resultado do método `Promise::then`. Os métodos `then` e `catch` de objetos do tipo `Promise` retornam outras Promises, trabalhando como _fluent interfaces_ e possibilitando encadeamento.
 
-Quando a Promise retornada pelo método `ProductsRepository::fetch` finalizar a sua execução através da _closure_ `resolve`, o método `then` receberá como parâmetro os produtos encontrados na camada de repositório. No exemplo acima, há um mapeamento dos produtos apresentados, criando uma estrutura de `HashMap`, facilitando a captura posterior dos objetos encontrados.
+Quando a Promise retornada pelo método `ProductsRepository::fetch` finalizar a sua execução através da _closure_ `resolve`, o método `then` receberá como parâmetro os produtos encontrados na camada de repositório. No exemplo acima, há um mapeamento dos produtos apresentados, criando uma estrutura de _hashmap_, facilitando a captura posterior dos objetos encontrados.
 
 Após o mapeamento, define-se uma nova consulta, desta vez ao repositório de preços, através do método `PricesRepository::fetch`. Este método retorna um novo objeto do tipo `Promise`; o método `then` é invocado e a _closure_ passada recebe como parâmetro um conjunto de preços de produtos encontrados no Web Service.
 
-Para cada produto encontrado anteriormente, configura-se o seu preço. Por fim, a última _closure_ retorna um _array_ com todos os objetos configurados, sem o mapeamento de _hashes_, limpando a estrutura criada para facilitar a indexação.
+Para cada produto encontrado anteriormente, configura-se o seu preço. Por fim, a última _closure_ retorna um _array_ com todos os objetos configurados, sem o mapeamento de _hashes_, limpando a estrutura criada durante indexação.
 
 ### Encadeamento de Promessas
 
@@ -244,13 +244,13 @@ btnSearch.on('click', function () {
 
 O código anterior captura o botão com identificador `btn-search`, registrando um _callback_ para eventos do tipo `onClick`. Caso este evento seja executado, há uma inicialização dos parâmetros de consulta, configurando o atributo `type` com o valor do campo de formulário com identificador `form-type`.
 
-Antes de inicializar a consulta de produtos, apresenta-se um _feedback_ ao usuário, apresentando uma animação de _loading_. Após, há uma consulta de produtos através do método `ProductsService::fetch` que retorna um objeto do tipo `Promise`. A seguir, adiciona-se uma _closure_ encadeada através do método `then` com parâmetro único: um _array_ de produtos com seus nomes e preços.
+Antes de inicializar a consulta de produtos, apresenta-se um _feedback_ ao usuário, exibindo uma animação de _loading_. Após, há uma consulta de produtos através do método `ProductsService::fetch` que retorna um objeto do tipo `Promise`. A seguir, adiciona-se uma _closure_ encadeada através do método `then` com parâmetro único: um _array_ de produtos com seus nomes e preços, resultantes da pesquisa assíncrona interna.
 
 Com a execução finalizada com sucesso, há a renderização de produtos e a omissão do _feedback_ de _loading_. Caso qualquer erro seja encontrado, define-se uma outra _closure_ no método `catch`, responsável pela limpeza da renderização de produtos e apresentação de erros no Console.
 
 ## Conclusão
 
-Observa-se que a utilização de objetos da classe `Promise` melhora a construção e definição de sequência de execuções assíncronas no código-fonte, inibindo a criação de programas classificados como Callback Hell (ODGEN 2012).
+Observa-se que durante a utilização de objetos da classe `Promise`, há uma melhora a construção e definição de sequência de execuções assíncronas no código-fonte, inibindo a criação de programas classificados como Callback Hell (ODGEN 2012).
 
 Nota-se, também, que o encapsulamento de funcionalidades que dependem de execuções assíncronas, como consultas a banco de dados ou Web Services, tornam-se transparentes: a programação de recursos que possuem dependências destas funções são praticamente definidas no formato síncrono, deixando a cargo da linguagem de programação o tratamento do paralelismo.
 
@@ -266,3 +266,4 @@ Posteriores estudos deverão apresentar como efetuar tratamento de erros com obj
 * [Wikipedia: Fluent Interface](https://en.wikipedia.org/wiki/Fluent_interface)
 * [JavaScript Promises for Dummies](https://scotch.io/tutorials/javascript-promises-for-dummies) por [Jecelyn Yeen](https://about.me/jecelyn)
 * [Promessas em JavaScript: Uma Introdução](https://developers.google.com/web/fundamentals/getting-started/primers/promises?hl=pt-br) por [Jake Archibald](https://developers.google.com/web/resources/contributors?hl=pt-br#jakearchibald)
+* [Repository Design Pattern](https://code.tutsplus.com/tutorials/the-repository-design-pattern--net-35804) por [Patkos Csaba](http://patkoscsaba.blogspot.com.br/)
