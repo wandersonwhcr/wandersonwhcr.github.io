@@ -248,9 +248,16 @@ Antes de inicializar a consulta de produtos, apresenta-se um _feedback_ ao usuá
 
 Com a execução finalizada com sucesso, há a renderização de produtos e a omissão do _feedback_ de _loading_. Caso qualquer erro seja encontrado, define-se uma outra _closure_ no método `catch`, responsável pela limpeza da renderização de produtos e apresentação de erros no Console.
 
+## Conclusão
+
+Observa-se que a utilização de objetos da classe `Promise` melhora a construção e definição de sequência de execuções assíncronas no código-fonte, inibindo a criação de programas classificados como Callback Hell (ODGEN 2012).
+
+Nota-se, também, que o encapsulamento de funcionalidades que dependem de execuções assíncronas, como consultas a banco de dados ou Web Services, tornam-se transparentes: a programação de recursos que possuem dependências destas funções são praticamente definidas no formato síncrono, deixando a cargo da linguagem de programação o tratamento do paralelismo.
+
 ## Referências
 
 * MOZILLA. _Promise_. Disponível em [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global\_Objects/Promise](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise). Acesso em 18/03/2017.
+* ODGEN, M. _Callback Hell_. Disponível em [http://callbackhell.com/](http://callbackhell.com/). Acesso em 18/03/2017. Modificado em 10/10/2012.
 
 ## Veja Mais
 
