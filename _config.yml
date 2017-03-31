@@ -8,7 +8,7 @@ theme_settings:
         Programador PHP Zend Framework
 
     header_text: >
-        <p>"Computer Science is no more about computers than Astronomy is about telescopes." — DIJKSTRA, E. W.</p>
+        <p>"I do not fear computers. I fear the lack of them." — ASIMOV, L.</p>
 
     rss: true
     email_address: wandersonwhcr@gmail.com
