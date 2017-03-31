@@ -242,6 +242,12 @@ btnSearch.on('click', function () {
 });
 ```
 
+O código anterior captura o botão com identificador `btn-search`, registrando um _callback_ para eventos do tipo `onClick`. Caso este evento seja executado, há uma inicialização dos parâmetros de consulta, configurando o atributo `type` com o valor do campo de formulário com identificador `form-type`.
+
+Antes de inicializar a consulta de produtos, apresenta-se um _feedback_ ao usuário, apresentando uma animação de _loading_. Após, há uma consulta de produtos através do método `ProductsService::fetch` que retorna um objeto do tipo `Promise`. A seguir, adiciona-se uma _closure_ encadeada através do método `then` com parâmetro único: um _array_ de produtos com seus nomes e preços.
+
+Com a execução finalizada com sucesso, há a renderização de produtos e a omissão do _feedback_ de _loading_. Caso qualquer erro seja encontrado, define-se uma outra _closure_ no método `catch`, responsável pela limpeza da renderização de produtos e apresentação de erros no Console.
+
 ## Referências
 
 * MOZILLA. _Promise_. Disponível em [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global\_Objects/Promise](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise). Acesso em 18/03/2017.
