@@ -264,3 +264,5 @@ Posteriores estudos deverão apresentar como efetuar tratamento de erros com obj
 ## Veja Mais
 
 * [Wikipedia: Fluent Interface](https://en.wikipedia.org/wiki/Fluent_interface)
+* [JavaScript Promises for Dummies](https://scotch.io/tutorials/javascript-promises-for-dummies) por [Jecelyn Yeen](https://about.me/jecelyn)
+* [Promessas em JavaScript: Uma Introdução](https://developers.google.com/web/fundamentals/getting-started/primers/promises?hl=pt-br) por [Jake Archibald](https://developers.google.com/web/resources/contributors?hl=pt-br#jakearchibald)
