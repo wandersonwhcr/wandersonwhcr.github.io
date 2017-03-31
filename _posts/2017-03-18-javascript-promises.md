@@ -5,7 +5,7 @@ date: 2017-03-18
 category: JavaScript
 ---
 
-O presente artigo apresenta uma (não tão) breve introdução sobre JavaScript Promises (promessas, em tradução livre), estruturas que facilitam a execução assíncrona de elementos encadeados. Inclui um caso de uso para consulta assíncrona de produtos com preços, apresentando um _feedback_ ao usuário durante a execução.
+O presente artigo apresenta uma (não tão) breve introdução sobre JavaScript Promises (promessas, em tradução livre), estruturas que facilitam a execução assíncrona de elementos encadeados. Inclui, também, um caso de uso para consulta assíncrona de produtos com preços, apresentando um _feedback_ ao usuário durante a execução.
 
 ## Introdução
 
@@ -30,7 +30,7 @@ var calcSomethingPromise = new Promise(function (resolve, reject) {
 });
 ```
 
-Nota-se que um objeto do tipo `Promise` foi inicializado através de seu construtor, recebendo como parâmetro uma _closure_ que possui dois parâmetros: `resolve` e `reject`. Ambos parâmetros também são do tipo _closure_, onde `resolve` deve ser utilizado quando há sucesso de execução, e o `reject` quando um erro foi encontrado.
+Nota-se que um objeto do tipo `Promise` foi inicializado através de seu construtor, recebendo como parâmetro uma _closure_ que possui dois parâmetros: `resolve` e `reject`. Ambos parâmetros também são do tipo _closure_, onde `resolve` deve ser utilizado quando há sucesso de execução, e `reject` quando um erro for encontrado.
 
 ## Execução
 
@@ -65,7 +65,7 @@ Constata-se que as _closures_ configuradas pelo método `then` são executadas p
 
 ## Caso de Uso
 
-A criação de camadas de responsabilidade no código-fonte pode usufruir da estrutura de Promises através do padrão de projeto Repository. O exemplo abaixo apresenta uma camada de serviço responsável por apresentar uma lista de produtos com seus respectivos preços. Por sua vez, a camada de serviço acessa duas camadas de repositório, onde a primeira consulta os produtos filtrados, e a segunda os preços.
+A criação de camadas de responsabilidade no código-fonte pode usufruir da estrutura de Promises através do padrão de projeto Repository. O exemplo abaixo apresenta uma camada de serviço responsável por apresentar uma lista de produtos com seus respectivos preços. Por sua vez, a camada de serviço acessa duas camadas de repositório, onde a primeira consulta os produtos filtrados, e a segunda, os preços.
 
 ```js
 /**
