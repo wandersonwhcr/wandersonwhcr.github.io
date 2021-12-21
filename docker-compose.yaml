@@ -8,4 +8,4 @@ services:
       - ".:/srv/jekyll"
     ports:
       - "4000:4000"
-    command: ["jekyll", "serve", "--future", "--unpublished", "--drafts"]
+    command: ["jekyll", "serve", "--incremental", "--future", "--unpublished", "--drafts"]
